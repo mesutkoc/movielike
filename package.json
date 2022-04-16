@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,11 +40,12 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "enzyme": "^3.11.0",
     "husky": "^7.0.4",
-    "jest-watch-typeahead": "^0.6.5"
+    "jest-watch-typeahead": "^0.6.5",
+    "pre-commit": "^1.2.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "CI=true npm run test"
+      "pre-commit": "test"
     }
   }
 }
