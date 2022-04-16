@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import Button from "./Button";
+
 function Header() {
     return (
         <div className="rootHeader">
