@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header";
 import {shallow,mount} from 'enzyme';
+import SearchBox from "../SearchBox";
 
 describe('header test',()=>{
     it('should render text with type prop',()=>{
@@ -14,11 +15,11 @@ describe('header test',()=>{
     })
     it("should have button", () => {
         const wrapper = shallow(<Header />);
-        expect(wrapper.containsMatchingElement(<button>Search</button>)).toBe(true)
+        expect(wrapper.containsMatchingElement(<label>METFLIX</label>)).toBe(true)
     });
     it("should have input", () => {
         const wrapper = shallow(<Header />);
-        expect(wrapper.containsMatchingElement(<input></input>)).toBe(true)
+        expect(wrapper.containsMatchingElement(<SearchBox></SearchBox>)).toBe(true)
     });
 
 })
