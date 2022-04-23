@@ -6,7 +6,6 @@
 
     .headerTitle{
         font-style: italic;
-        line-height: 75px;
         align-items: center;
         font-size: 64px;
         font-weight: 800;
@@ -15,47 +14,52 @@
         color: #FFFFFF;
         margin-left: 39px;
     }
-
-    .headerInput{
-        background: #FFFFFF;
-        border-style: none;
-        border-radius: 25px 0px 0px 25px;
-        width: 532px;
-        height: 40px;
+    
+    .searchbox{
         margin-left: 61px;
-        margin-top: 30px;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .headerInput::placeholder{
-        color: #B80000;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 28px;
+        align-items: center;
         display: flex;
-        text-align: center;
-        align-items: center;
-        
-    }
 
-    .headerSearchButton{
-        background: #FFFFFF;
-        border: 1px solid #B80000;
-        color: #B80000;
-        border-radius: 0px 25px 25px 0px;
-        position: absolute;
-        width: 108px;
-        height: 44px;
-        margin-top: 29px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 28px;
-        align-items: center;
-        text-align: center;        
+        .headerInput{
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-style: none;
+            border-radius: 25px 0px 0px 25px;
+            padding: 0 130px;
+            height: 40px;
+            font-size: 24px;
+            text-align: center;
+            align-items: center;
+        }
+        
+        .headerInput::placeholder{
+            color: #B80000;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        .headerSearchButton{
+            background: #FFFFFF;
+            border-style: none;
+            color: #B80000;
+            border-radius: 0px 25px 25px 0px;
+            padding: 0 10px;
+            margin-left: 1px;
+            height: 40px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 28px;
+            align-items: center;
+            text-align: center;        
+        }
     }
+    
 }
