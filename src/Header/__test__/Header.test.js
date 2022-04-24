@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header";
 import {shallow,mount} from 'enzyme';
+import toJson from 'enzyme-to-json';
 import SearchBox from "../SearchBox";
 
 describe('header test',()=>{
@@ -22,4 +23,9 @@ describe('header test',()=>{
         expect(wrapper.containsMatchingElement(<SearchBox></SearchBox>)).toBe(true)
     });
 
+    // it('snapshot',()=>{
+    //     const wrapper = shallow(<Header />)
+
+    //     expect(toJson(wrapper)).toMatchSnapshot();
+    // })
 })

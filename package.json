@@ -40,6 +40,7 @@
   "devDependencies": {
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
     "husky": "^7.0.4",
     "jest-watch-typeahead": "^0.6.5",
     "pre-commit": "^1.2.2"
