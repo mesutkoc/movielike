@@ -1,0 +1,56 @@
+.favItems{
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .userAction{
+        width: 220px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.12);
+        text-align: center;
+        align-items: center;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+
+        .playIcon{
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        .star{
+            width: 30px;
+            height: 30px;
+            fill: #FDE936;
+        }
+        .heart{
+            width: 30px;
+            height: 30px;
+            fill: #FF0404;
+        }
+    }
+    .viewCount{
+        background: rgba(255, 255, 255, 0.12);
+        height: 32px;
+        width: 74px;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+
+        .eye{
+            width: 21px;
+            height: 21px;
+            fill: white;
+            margin-left: 6px;
+        }
+        .count{
+            color: white;
+            margin-left: 6px;
+        }
+    }
+   
+}
