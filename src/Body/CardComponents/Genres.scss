@@ -3,15 +3,18 @@
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     
 
     .genreType{
         color: #FFFFFF;
         background: rgba(255, 255, 255, 0.12);
         border-radius: 25px;
-        padding: 5px 20px;
+        padding: 5px 15px;
         font-size: 18px;
         
+
+        &:not(:first-child){
+            margin-left: 10px;
+        }
     }
 }

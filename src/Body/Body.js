@@ -2,14 +2,12 @@ import React from "react";
 import "./Body.scss"
 import HorizontalCard from "./Horizontal/HorizontalCard";
 
-function Body() {
+function Body({movie}) {
     return (<div className="body">
-        <HorizontalCard></HorizontalCard>
-        <HorizontalCard></HorizontalCard>
-        <HorizontalCard></HorizontalCard>
-        <HorizontalCard></HorizontalCard>
-        <HorizontalCard></HorizontalCard>
-        <HorizontalCard></HorizontalCard>
+        {movie.slice(0,50).map((movieData,index)=>
+            <HorizontalCard movieData={movieData} key={index}></HorizontalCard>
+        )}
+        
     </div>);
 }
 
