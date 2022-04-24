@@ -1,5 +1,10 @@
 .body{
-    position: absolute;
-    left: 30px;
-    top: 120px;
+    position: relative;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 1340px;
+    display: flex;
+    flex-flow: row wrap;
+    
+
 }

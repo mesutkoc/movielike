@@ -14,9 +14,15 @@ function HorizontalCard() {
   const movieData = movie.find(item => item.id === '166428')
 
   return <div className="horizontalCard">
-      <CardImage image={movieData?.poster}></CardImage>
-      <CardHeader title={movieData?.title}></CardHeader>
-      <CardOverview overview={movieData?.overview}></CardOverview>
+      <div className="imageDiv">
+        <CardImage image={movieData?.poster}></CardImage>
+      </div>
+      <div className="titleDiv">
+        <CardHeader title={movieData?.title}></CardHeader>
+      </div>
+      <div className="overviewDiv">
+        <CardOverview overview={movieData?.overview}></CardOverview>
+      </div>
       <div className="trailerInfo">
         <TrailerButton></TrailerButton>
       </div>

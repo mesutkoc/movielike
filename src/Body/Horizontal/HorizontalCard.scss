@@ -3,7 +3,21 @@
     height: 334px;
     background: #000000;
     border-radius: 25px 0px;
-    
+    margin: 10px;
+    .imageDiv{
+        position: absolute;
+        margin: 0;
+    }
+    .titleDiv{
+        position: absolute;
+        margin-top: 24px;
+        margin-left: 241px;
+    }
+    .overviewDiv{
+        position: absolute;
+        margin-left: 241px;
+        margin-top: 86px;
+    }
     .trailerInfo{
         position: absolute;
         margin-top: 163px;

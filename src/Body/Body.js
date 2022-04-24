@@ -5,6 +5,11 @@ import HorizontalCard from "./Horizontal/HorizontalCard";
 function Body() {
     return (<div className="body">
         <HorizontalCard></HorizontalCard>
+        <HorizontalCard></HorizontalCard>
+        <HorizontalCard></HorizontalCard>
+        <HorizontalCard></HorizontalCard>
+        <HorizontalCard></HorizontalCard>
+        <HorizontalCard></HorizontalCard>
     </div>);
 }
 
