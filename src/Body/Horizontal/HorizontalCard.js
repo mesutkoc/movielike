@@ -6,6 +6,7 @@ import CardHeader from "../CardComponents/CardHeader";
 import CardOverview from "../CardComponents/CardOverview";
 import TrailerButton from "../CardComponents/TrailerButton";
 import FavPart from "../CardComponents/FavPart";
+import Genres from "../CardComponents/Genres";
 
 function HorizontalCard() {
   const { movie } = useMovie();
@@ -21,6 +22,9 @@ function HorizontalCard() {
       </div>
       <div className="favPart">
         <FavPart></FavPart>
+      </div>
+      <div className="genresPart">
+        <Genres></Genres>
       </div>
   </div>;
 }
