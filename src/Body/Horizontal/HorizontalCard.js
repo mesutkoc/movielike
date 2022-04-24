@@ -24,7 +24,7 @@ function HorizontalCard() {
         <FavPart></FavPart>
       </div>
       <div className="genresPart">
-        <Genres></Genres>
+        <Genres genres={movieData?.genres}></Genres>
       </div>
   </div>;
 }

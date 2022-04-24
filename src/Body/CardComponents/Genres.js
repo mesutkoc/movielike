@@ -1,14 +1,10 @@
 import React from "react";
 import "./Genres.scss"
 
-function Genres() {
+function Genres({genres}) {
   return (<div className="genresTable">
       
-      
-      <div className="genreType">Action</div>
-      <div className="genreType">Adventure</div>
-      <div className="genreType">Comedy</div>
-      
+      {genres?.map((genre,index)=><div key={index} className="genreType">{genre}</div>)}
       
       </div>);
 }
