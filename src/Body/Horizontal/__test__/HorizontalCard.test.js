@@ -1,7 +1,6 @@
 import React from "react";
 import {render} from '@testing-library/react';
-import { mount, shallow } from "enzyme";
-import toJson from 'enzyme-to-json';
+import { mount } from "enzyme";
 import HorizontalCard from "../HorizontalCard";
 import CardImage from "../../CardComponents/CardImage"
 import CardHeader from "../../CardComponents/CardHeader"
@@ -9,7 +8,7 @@ import CardOverview from "../../CardComponents/CardOverview"
 import TrailerButton from "../../CardComponents/TrailerButton"
 import FavPart from "../../CardComponents/FavPart"
 import Genres from "../../CardComponents/Genres"
-
+import {horizantalCardData} from "./horizantalCardDummyData"
 
 describe('Horizontal Card test',()=>{
 
@@ -23,8 +22,13 @@ describe('Horizontal Card test',()=>{
         expect(wrapper.containsMatchingElement(<Genres></Genres>)).toBe(true);
     })
     
-    // it('snapshot',()=>{
-    //     const wrapper = shallow(<HorizontalCard />)
-    //     expect(toJson(wrapper)).toMatchSnapshot();
-    // })
+    it('Rendering with props',()=>{
+        const wrapper = mount(<HorizontalCard movieData={horizantalCardData} index={0}/>)
+        expect(wrapper.containsAllMatchingElements([<div className="cardHeader"><label className="cardTitle">Shazam!</label></div>,
+        <div className="cardOverview"><label className="overview">A boy is given the ability to become an adult superhero in times of need with a single magic word.</label></div>,
+        <div key={0} className="genreType">Action</div>,
+        <div key={1} className="genreType">Comedy</div>,
+        <div key={2} className="genreType">Fantasy</div>]))
+        .toBe(true);
+    })
 })
