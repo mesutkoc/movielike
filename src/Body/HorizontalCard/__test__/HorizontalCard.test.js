@@ -25,6 +25,7 @@ describe('Horizontal Card test', () => {
     it('Rendering with props', () => {
         const wrapper = mount(<HorizontalCard movieData={horizantalCardData} index={0} />)
         expect(wrapper.containsAllMatchingElements([<div className="cardHeaders"><label className="cardTitles">Shazam!</label></div>,
+        <div className="cardImages"><img className="imageSizes" src={horizantalCardData?.poster} alt="error"></img></div>,
         <div className="cardOverview"><label className="overview">A boy is given the ability to become an adult superhero in times of need with a single magic word.</label></div>,
         <div key={0} className="genreType">Action</div>,
         <div key={1} className="genreType">Comedy</div>,
