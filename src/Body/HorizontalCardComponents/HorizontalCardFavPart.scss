@@ -1,11 +1,12 @@
-.favItems{
+.favItemss{
     height: 50px;
+    width: 340px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: space-between;
+    margin-top: 5px;
     
-    .userAction{
+    .userActions{
         width: 220px;
         height: 40px;
         background-color: rgba(255, 255, 255, 0.12);        
@@ -30,5 +31,26 @@
             height: 30px;
             fill: #FF0404;
         }
-    } 
+    }
+
+    .viewCounts{
+        background: rgba(255, 255, 255, 0.12);
+        height: 32px;
+        width: 74px;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+
+        .eye{
+            width: 21px;
+            height: 21px;
+            fill: white;
+            margin-left: 6px;
+        }
+        .count{
+            color: white;
+            margin-left: 6px;
+        }
+    }
+   
 }

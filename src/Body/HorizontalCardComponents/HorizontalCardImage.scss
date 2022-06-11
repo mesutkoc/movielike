@@ -1,0 +1,11 @@
+.cardImages{
+    display: flex;
+    width: 224px;
+    height: 334px;
+
+    .imageSizes{
+        width: inherit;
+        height: inherit;
+        border-radius: 25px 0 0 0;
+    }
+}
