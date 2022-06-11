@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { MovieProvider } from './Context/MovieContext';
+import { GenreProvider } from './Context/GenresContext';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <MovieProvider>
-      <App />
+      <GenreProvider>
+        <App />
+      </GenreProvider>
     </MovieProvider>
 );
 

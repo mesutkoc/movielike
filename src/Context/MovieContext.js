@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import getMovies from "../requests";
+import getMovies from "../Requests/MovieRequest"
 
 const MovieContext = createContext();
 
