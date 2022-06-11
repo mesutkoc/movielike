@@ -1,11 +1,24 @@
 import React from "react";
 import "./Button.scss"
 
-function Button({type}) {
-  return <div className="headerButton"><button className={`button${type}`}>{type}</button></div>;
+function Button({ type, showGenreFilters, setGenreFiltersView, showBasket, setBasketView }) {
+  const showGenresList = (type) => {
+    if (type === 'Genres') {
+      setBasketView(false);
+      showGenreFilters === false ? setGenreFiltersView(true) : setGenreFiltersView(false)
+    }
+    if (type === 'Basket') {
+      setGenreFiltersView(false);
+      showBasket === false ? setBasketView(true) : setBasketView(false)
+    }
+
+
+
+  }
+  return <div className="headerButton" onClick={() => showGenresList(type)}><button className={`button${type}`}>{type}</button></div>;
 }
 
-Button.defaultProps ={
-    type: String
+Button.defaultProps = {
+  type: String
 }
 export default Button;

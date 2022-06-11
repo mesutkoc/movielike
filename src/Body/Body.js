@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import "./Body.scss"
 import HorizontalCard from "./Horizontal/HorizontalCard";
 
@@ -11,4 +11,4 @@ function Body({movie}) {
     </div>);
 }
 
-export default Body;
+export default memo(Body);

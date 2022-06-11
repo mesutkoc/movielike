@@ -1,13 +1,13 @@
-.genresFilter{
-    .genresList{
+.basket{
+    .basketList{
         list-style: none;
     
-        .genresItem{
+        .basketItem{
             text-align: left;
             font-size: 18px;
             color:black;
         }
-        .genresItem:hover{
+        .basketItem:hover{
             cursor: pointer;
             font-size: 20px;
             background-color: #b3b3b3;
