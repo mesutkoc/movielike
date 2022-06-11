@@ -4,8 +4,12 @@ import {ReactComponent as CirclePlay} from "../../Icons/circle-play.svg"
 import {ReactComponent as Star} from "../../Icons/star-solid.svg"
 import {ReactComponent as Heart} from "../../Icons/heart-solid.svg"
 import {ReactComponent as Eye} from "../../Icons/eye-solid.svg"
+import randomPoint from "../../helpers";
 
 function HorizontalCardFavPart() {
+
+  const point = randomPoint();
+
   return (<div className="favItemss">
       
         <div className="userActions">
@@ -15,7 +19,7 @@ function HorizontalCardFavPart() {
         </div>
         <div className="viewCounts">
             <Eye className="eye"></Eye>
-            <label className="count">9999</label>
+            <label className="count">{point}</label>
         </div>
       </div>);
 }

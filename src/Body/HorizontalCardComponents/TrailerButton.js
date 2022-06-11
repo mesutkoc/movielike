@@ -1,14 +1,9 @@
 import React from "react";
 import "./TrailerButton.scss";
+import randomPoint from "../../helpers";
 
 function TrailerButton() {
-
-    const randomPoint = () => {
-        const point = Math.floor((Math.random() * 10) + 1);
-        const degree = (360 * point) / 100;
-        return [point, degree]
-    }
-
+    
     let points = randomPoint();
 
     return (
