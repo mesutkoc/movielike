@@ -13,10 +13,10 @@ function FavPart() {
             <Star className="star"></Star>
             <Heart className="heart"></Heart>
         </div>
-        <div className="viewCount">
+        {/* {cardType !== 'verticalCard' && <div className="viewCount">
             <Eye className="eye"></Eye>
             <label className="count">9999</label>
-        </div>
+        </div> } */}
       </div>);
 }
 

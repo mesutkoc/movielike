@@ -1,16 +1,14 @@
 .favItems{
-    width: 340px;
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center;
+    margin-top: 20px;
+    
     .userAction{
         width: 220px;
         height: 40px;
-        background-color: rgba(255, 255, 255, 0.12);
-        text-align: center;
-        align-items: center;
+        background-color: rgba(255, 255, 255, 0.12);        
         border-radius: 25px;
         display: flex;
         align-items: center;
@@ -33,24 +31,24 @@
             fill: #FF0404;
         }
     }
-    .viewCount{
-        background: rgba(255, 255, 255, 0.12);
-        height: 32px;
-        width: 74px;
-        display: flex;
-        align-items: center;
-        border-radius: 25px;
+    // .viewCount{
+    //     background: rgba(255, 255, 255, 0.12);
+    //     height: 32px;
+    //     width: 74px;
+    //     display: flex;
+    //     align-items: center;
+    //     border-radius: 25px;
 
-        .eye{
-            width: 21px;
-            height: 21px;
-            fill: white;
-            margin-left: 6px;
-        }
-        .count{
-            color: white;
-            margin-left: 6px;
-        }
-    }
+    //     .eye{
+    //         width: 21px;
+    //         height: 21px;
+    //         fill: white;
+    //         margin-left: 6px;
+    //     }
+    //     .count{
+    //         color: white;
+    //         margin-left: 6px;
+    //     }
+    // }
    
 }

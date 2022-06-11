@@ -1,13 +1,12 @@
 import React, {memo} from "react";
 import "./Body.scss"
-import HorizontalCard from "./Horizontal/HorizontalCard";
+import VerticalCard from "./VerticalCard/VerticalCard";
 
 function Body({movie}) {
     return (<div className="body">
-        {movie.slice(0,50).map((movieData,index)=>
-            <HorizontalCard movieData={movieData} key={index}></HorizontalCard>
-        )}
-        
+        {movie.slice(0,5).map((movieData,index)=>
+            <VerticalCard movieData={movieData} key={index}></VerticalCard>
+        )} 
     </div>);
 }
 

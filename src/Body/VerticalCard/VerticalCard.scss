@@ -1,0 +1,23 @@
+.verticalCard{
+    height: 500px;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 0 25px;
+    margin: 10px;
+
+    .circlePlay{
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        fill: rgba(247, 247, 247, 0.5);
+        margin-top: 110px;
+        margin-left: -60px;
+        z-index: 1;
+    }
+    .circlePlay:hover{
+        cursor: pointer;
+        fill: rgba(247, 247, 247, 0.8);
+        transform: scale(1.1);
+    }
+    
+}
