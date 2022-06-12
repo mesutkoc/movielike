@@ -1,6 +1,7 @@
 import React, { memo, useState } from "react";
 import "./Body.scss"
 import HorizontalCard from "./HorizontalCard/HorizontalCard";
+import Pagination from "./Pagination/Pagination";
 import VerticalCard from "./VerticalCard/VerticalCard";
 
 function Body({ movie }) {
@@ -9,15 +10,15 @@ function Body({ movie }) {
     const indexOfLastMovie = currentPage * moviesPerPage;
     const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
     const currentMovie = movie?.slice(indexOfFirstMovie, indexOfLastMovie);
+
     const pagenumber = [];
-    for(let i = 1; i < Math.ceil(movie.slice(0,50).length / moviesPerPage); i++){
+    for(let i = 1; i < Math.ceil(movie.slice(0,150).length / moviesPerPage); i++){
         pagenumber.push(i);
     }
+
     const handleClick = (item)=> {
-       
         setCurrentPage(Number(item))
-        
-      }
+    }
     return (<div className="body">
         {currentMovie?.map((movieData, index) =>
             <HorizontalCard movieData={movieData} key={index}></HorizontalCard>
@@ -25,9 +26,7 @@ function Body({ movie }) {
         {/* {movie.slice(0, 8).map((movieData, index) =>
             <VerticalCard movieData={movieData} key={index}></VerticalCard>
         )} */}
-        <ul>
-            {pagenumber.map((item,index) => <li key={index} onClick={()=>handleClick(item)}>{item}</li>)}
-        </ul>
+        <Pagination pagenumber={pagenumber} handleClick={handleClick} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
     </div>);
 }
 
