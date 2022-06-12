@@ -1,4 +1,5 @@
 import React, { memo, useState } from "react";
+import { scrollPage } from "../helpers";
 import "./Body.scss"
 import HorizontalCard from "./HorizontalCard/HorizontalCard";
 import Pagination from "./Pagination/Pagination";
@@ -17,7 +18,8 @@ function Body({ movie }) {
     }
 
     const handleClick = (item)=> {
-        setCurrentPage(Number(item))
+        setCurrentPage(Number(item));
+        scrollPage();
     }
     return (<div className="body">
         {currentMovie?.map((movieData, index) =>

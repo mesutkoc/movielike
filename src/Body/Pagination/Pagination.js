@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollPage } from "../../helpers";
 import "./Pagination.scss";
 
 function Pagination({ pagenumber, handleClick, currentPage, setCurrentPage }) {
@@ -6,9 +7,11 @@ function Pagination({ pagenumber, handleClick, currentPage, setCurrentPage }) {
     const selectPage = (type) => {
         if(type === "prev"){
             currentPage !== pagenumber[0] && setCurrentPage(currentPage - 1);
+            scrollPage();
         }
         if(type === "next"){
             currentPage !== pagenumber.length && setCurrentPage(currentPage + 1); 
+            scrollPage();
         }
         
     }
