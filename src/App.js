@@ -10,7 +10,7 @@ import Basket from './Header/Basket';
 import Detail from './Body/Detail';
 
 function App() {
-  const { movie } = useMovie();
+  const { movies } = useMovie();
   const { genre } = useGenre();
   const [showGenreFilters, setGenreFiltersView] = useState(false);
   const [showBasket, setBasketView] = useState(false);
@@ -23,8 +23,8 @@ function App() {
           {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
           {showBasket && <Basket></Basket>}
           <Routes>
-            <Route path="/" exact element={<Body movie={movie} />} />
-            <Route path="details/:id" element={<Detail />} />
+            <Route path="/" exact element={<Body movies={movies} />} />
+            <Route path="/details/:id" element={<Detail />} />
           </Routes>
         </div>
     </Router>

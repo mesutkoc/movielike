@@ -5,13 +5,13 @@ const MovieContext = createContext();
 
 export const MovieProvider = ({ children }) => {
 
-    const [movie, setMovie] = useState([]);
+    const [movies, setMovies] = useState([]);
     const values = {
-        movie,
-        setMovie
+        movies,
+        setMovies
     }
     useEffect(() => {
-        getMovies().then(res => setMovie(res?.data))
+        getMovies().then(res => setMovies(res?.data))
     }, [])
     return <MovieContext.Provider value={values} >{children}</MovieContext.Provider>
 };

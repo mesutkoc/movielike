@@ -5,15 +5,15 @@ import HorizontalCard from "./HorizontalCard/HorizontalCard";
 import Pagination from "./Pagination/Pagination";
 import VerticalCard from "./VerticalCard/VerticalCard";
 
-function Body({ movie }) {
+function Body({ movies }) {
     const [currentPage, setCurrentPage] = useState(1);
     const moviesPerPage = 16;
     const indexOfLastMovie = currentPage * moviesPerPage;
     const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
-    const currentMovie = movie?.slice(indexOfFirstMovie, indexOfLastMovie);
+    const currentMovie = movies?.slice(indexOfFirstMovie, indexOfLastMovie);
 
     const pagenumber = [];
-    for(let i = 1; i < Math.ceil(movie.slice(0,150).length / moviesPerPage); i++){
+    for(let i = 1; i < Math.ceil(movies.slice(0,150).length / moviesPerPage); i++){
         pagenumber.push(i);
     }
 

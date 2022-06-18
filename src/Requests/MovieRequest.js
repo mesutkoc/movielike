@@ -5,4 +5,10 @@ const getMovies = async() =>{
     return res;
 }
 
+export const getMovie = async(itemId)=>{
+    const fetchItem = await fetch(`http://localhost:3000/movies/${itemId}`);
+    const res = await fetchItem.json();
+    return res;
+}
+
 export default getMovies;
