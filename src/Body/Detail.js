@@ -15,13 +15,12 @@ function Detail() {
   //   console.log(item);
   // }
 
-  console.log(movie);
   return <div>
     <ul>
       <li>{movie?.id}</li>
       <li>{movie?.title}</li>
       <li>{movie?.overview}</li>
-      <li><img src={movie?.poster}/></li>
+      <li><img src={movie?.poster} alt="movieImage"/></li>
       <li>{movie?.genres?.map(item=> <li>{item}</li>)}</li>
       <li>{movie?.release_date}</li>
     </ul>
