@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./TrailerButton.scss";
 import randomPoint from "../../helpers";
 
-function TrailerButton() {
+function TrailerButton({id}) {
     
     let points = randomPoint();
 
     return (
         <div className="trailerButton">
-            <button className="button">WATCH TRAILER</button>
+            <Link to={`details/${id}`} className="buttonLink"><button className="button">SEE DETAILS</button></Link>
             <div className="bigCircle" style={{ backgroundImage: `conic-gradient(red 0deg, red ${points[1] * 10}deg,black 0deg, black 360deg)` }}>
                 <div className="middleCircle">{points[0]}</div>
             </div>

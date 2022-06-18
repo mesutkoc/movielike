@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from '@testing-library/react';
+import { BrowserRouter } from "react-router-dom";
 import { mount } from "enzyme";
 import HorizontalCard from "../HorizontalCard";
 import HorizontalCardImage from "../../HorizontalCardComponents/HorizontalCardImage"
@@ -13,7 +14,7 @@ import { horizantalCardData } from "./horizantalCardDummyData"
 describe('Horizontal Card test', () => {
 
     it('should render 6 components', () => {
-        const wrapper = mount(<HorizontalCard></HorizontalCard>);
+        const wrapper = mount(<BrowserRouter><HorizontalCard></HorizontalCard></BrowserRouter>);
         expect(wrapper.containsMatchingElement(<HorizontalCardImage></HorizontalCardImage>)).toBe(true);
         expect(wrapper.containsMatchingElement(<HorizontalCardTitle></HorizontalCardTitle>)).toBe(true);
         expect(wrapper.containsMatchingElement(<CardOverview></CardOverview>)).toBe(true);
@@ -23,7 +24,7 @@ describe('Horizontal Card test', () => {
     })
 
     it('Rendering with props', () => {
-        const wrapper = mount(<HorizontalCard movieData={horizantalCardData} index={0} />)
+        const wrapper = mount(<BrowserRouter><HorizontalCard movieData={horizantalCardData} index={0} /></BrowserRouter>)
         expect(wrapper.containsAllMatchingElements([<div className="cardHeaders"><label className="cardTitles">Shazam!</label></div>,
         <div className="cardImages"><img className="imageSizes" src={horizantalCardData?.poster} alt="error"></img></div>,
         <div className="cardOverview"><label className="overview">A boy is given the ability to become an adult superhero in times of need with a single magic word.</label></div>,

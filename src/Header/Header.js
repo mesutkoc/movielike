@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import Button from "./Button";
 import SearchBox from "./SearchBox";
@@ -6,7 +7,7 @@ import SearchBox from "./SearchBox";
 function Header({ setGenreFiltersView, showGenreFilters, showBasket, setBasketView }) {
     return (
         <div className="rootHeader">
-            <label className="headerTitle">METFLIX</label>
+          <Link to="/" className="headerTitlelink">METFLIX</Link>  
             <SearchBox></SearchBox>
             <Button type={"Genres"} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView}></Button>
             <Button type={"Basket"} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView}></Button>

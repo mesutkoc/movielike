@@ -3,17 +3,17 @@ import { scrollPage } from "../../helpers";
 import "./Pagination.scss";
 
 function Pagination({ pagenumber, handleClick, currentPage, setCurrentPage }) {
-    console.log(currentPage);
+
     const selectPage = (type) => {
-        if(type === "prev"){
+        if (type === "prev") {
             currentPage !== pagenumber[0] && setCurrentPage(currentPage - 1);
             scrollPage();
         }
-        if(type === "next"){
-            currentPage !== pagenumber.length && setCurrentPage(currentPage + 1); 
+        if (type === "next") {
+            currentPage !== pagenumber.length && setCurrentPage(currentPage + 1);
             scrollPage();
         }
-        
+
     }
 
     return <div className="pagination">

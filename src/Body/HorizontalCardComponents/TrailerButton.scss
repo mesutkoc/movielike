@@ -20,7 +20,13 @@
         align-items: center;
         text-align: center;
         color: #FFFFFF;
+        cursor: pointer;
     }
+
+    .buttonLink{
+        text-decoration: none;
+    }
+
     .bigCircle{
         position: relative;
         display: flex;

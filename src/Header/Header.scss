@@ -4,7 +4,7 @@
     flex-direction: row;
     height: 100px;
 
-    .headerTitle{
+    .headerTitlelink{
         font-style: italic;
         align-items: center;
         font-size: 64px;
@@ -13,8 +13,10 @@
         text-align: center;
         color: #FFFFFF;
         margin-left: 39px;
+        cursor: pointer;
+        text-decoration: none;
     }
-    
+   
     .searchbox{
         margin-left: 61px;
         align-items: center;
