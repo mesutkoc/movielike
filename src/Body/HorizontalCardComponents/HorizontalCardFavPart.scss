@@ -4,11 +4,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5px;
+    margin-top: 15px;
     
     .userActions{
         width: 220px;
-        height: 40px;
+        height: 50px;
         background-color: rgba(255, 255, 255, 0.12);        
         border-radius: 25px;
         display: flex;
@@ -35,21 +35,22 @@
 
     .viewCounts{
         background: rgba(255, 255, 255, 0.12);
-        height: 32px;
+        height: 35px;
         width: 74px;
         display: flex;
         align-items: center;
+        justify-content: space-around;
         border-radius: 25px;
-
+        padding: 0 3px;
+        
         .eye{
             width: 21px;
             height: 21px;
             fill: white;
-            margin-left: 6px;
         }
+
         .count{
             color: white;
-            margin-left: 6px;
         }
     }
    
