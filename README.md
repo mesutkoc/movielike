@@ -10,5 +10,7 @@ Second, open second terminal and go movielike folder.
 Command npm start and application run on localhost:3001.
 
 This application contains movies and their overview.
-All information of movies are fetched from server that mentioned above except number of views and votes. This number created with random number function.
+All information of movies are fetched from server that mentioned above except number of views and votes. 
+This number created with random number function.
 
+Keep going!!
