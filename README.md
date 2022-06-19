@@ -13,4 +13,4 @@ This application contains movies and their overview.
 All information of movies are fetched from server that mentioned above except number of views and votes. 
 This number created with random number function.
 
-Keep going!!
+Keep going!!!
