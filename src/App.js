@@ -7,7 +7,7 @@ import { useMovie } from './Context/MovieContext';
 import { useGenre } from './Context/GenresContext';
 import GenresFilters from './Header/GenresFilters';
 import Basket from './Header/Basket';
-import Detail from './Body/Detail';
+import Detail from './Body/DetailPage/Detail';
 
 function App() {
   const { movies } = useMovie();
