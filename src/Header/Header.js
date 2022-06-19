@@ -7,7 +7,7 @@ import SearchBox from "./SearchBox";
 function Header({ setGenreFiltersView, showGenreFilters, showBasket, setBasketView }) {
     return (
         <div className="rootHeader">
-          <Link to="/" className="headerTitlelink">METFLIX</Link>  
+          <Link to="/" className="headerTitlelink">MOVIELIKE</Link>  
             <SearchBox></SearchBox>
             <Button type={"Genres"} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView}></Button>
             <Button type={"Basket"} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView}></Button>

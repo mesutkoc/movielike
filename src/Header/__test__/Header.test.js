@@ -16,7 +16,7 @@ describe('header test', () => {
     // })
     it("should have button", () => {
         const wrapper = shallow(<Header />);
-        expect(wrapper.containsMatchingElement(<Link>METFLIX</Link>)).toBe(true)
+        expect(wrapper.containsMatchingElement(<Link>MOVIELIKE</Link>)).toBe(true)
     });
     it("should have input", () => {
         const wrapper = shallow(<Header />);
