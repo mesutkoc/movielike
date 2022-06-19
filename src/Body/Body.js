@@ -3,7 +3,6 @@ import { scrollPage } from "../helpers";
 import "./Body.scss"
 import HorizontalCard from "./HorizontalCard/HorizontalCard";
 import Pagination from "./Pagination/Pagination";
-import VerticalCard from "./VerticalCard/VerticalCard";
 
 function Body({ movies }) {
     const [currentPage, setCurrentPage] = useState(1);
