@@ -1,9 +1,10 @@
 .trailerButton{
-    width: 350px;
+    width: 330px;
     height: 60px;
     display: flex;
     align-items: center;
     margin-top: 20px;
+    justify-content: space-between;
 
     .button{
         background: #B80000;
