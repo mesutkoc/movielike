@@ -1,0 +1,30 @@
+.detailPageRoot {
+    display: flex;
+    background-color: yellow;
+    margin-top: 20px;
+    align-items: center;
+    
+    span, p{
+        font-size: 20px;
+    }
+
+    span{
+        margin: 0 2px;
+    }
+
+    .movieDetailInfo {
+        margin-left: 100px;
+        
+        .movieTitle {
+            font-size: 50px;
+        }
+
+        .movieOverview{
+            width: 700px;
+        }
+    }
+
+}
+.detailPageRoot > * > * {
+    cursor: default;
+}

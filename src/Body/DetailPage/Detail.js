@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovie } from "../../Requests/MovieRequest";
+import DetailImage from "./DetailPageComponents/DetailImage";
+import DetailPageInfo from "./DetailPageComponents/DetailPageInfo";
+import "./Detail.scss";
 
 function Detail() {
   const movieItem = useParams();
@@ -9,17 +12,12 @@ function Detail() {
   useEffect(() => {
     getMovie(movieItem.id).then(res => setMovie(res));
   }, [movieItem.id])
- 
-  return <div>
-    <ul>
-      <li>{movie?.id}</li>
-      <li>{movie?.title}</li>
-      <li>{movie?.overview}</li>
-      <li><img src={movie?.poster} alt="movieImage"/></li>
-      <li>{movie?.genres?.map(item=> <li>{item}</li>)}</li>
-      <li>{movie?.release_date}</li>
-    </ul>
-  </div>;
+
+  return (
+    <div className="detailPageRoot">
+      <DetailImage image={movie?.poster}></DetailImage>
+      <DetailPageInfo movieDetail={movie}></DetailPageInfo>
+    </div>);
 }
 
 export default Detail;
