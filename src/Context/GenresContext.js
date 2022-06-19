@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import getGenres from "../Requests/GenresRequest";
+import data from "../moviedata/new_movies.json";
 
 const GenresContext = createContext();
 
@@ -11,7 +12,7 @@ export const GenreProvider = ({ children }) => {
         setGenre
     }
     useEffect(() => {
-        getGenres().then(res => setGenre(res?.data))
+        getGenres().then(res => setGenre(res?.data)).catch(setGenre(data?.genres))
     }, [])
     return <GenresContext.Provider value={values} >{children}</GenresContext.Provider>
 };
