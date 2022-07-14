@@ -6,17 +6,22 @@ import { ReactComponent as Heart } from "../../Icons/heart-solid.svg"
 import { ReactComponent as Eye } from "../../Icons/eye-solid.svg"
 import randomPoint from "../../helpers";
 import { Link } from "react-router-dom";
+import { useBasket } from "../../Context/BasketContext";
 
-function HorizontalCardFavPart({id}) {
-
+function HorizontalCardFavPart({ movieData }) {
+  const { basket, setBasket } = useBasket();
   const point = randomPoint();
-  
+
+  const addBasket = (item) => {
+    setBasket([...basket, item])
+  }
+
   return (<div className="favItemss">
 
     <div className="userActions">
-      <Link to={`/watch/${id}`}><CirclePlay className="playIcon"></CirclePlay></Link>
+      <Link to={`/watch/${movieData?.id}`}><CirclePlay className="playIcon"></CirclePlay></Link>
       <Star className="star"></Star>
-      <Heart className="heart"></Heart>
+      <Heart className="heart" onClick={() => addBasket(movieData)}></Heart>
     </div>
     <div className="viewCounts">
       <Eye className="eye"></Eye>

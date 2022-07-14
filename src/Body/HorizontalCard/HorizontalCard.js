@@ -12,7 +12,7 @@ function HorizontalCard({movieData}) {
       <div className="horizontalCardRightSide">
            <CardOverview overview={movieData?.overview}></CardOverview>
            <TrailerButton id={movieData?.id}></TrailerButton>
-           <HorizontalCardFavPart id={movieData?.id}></HorizontalCardFavPart>
+           <HorizontalCardFavPart movieData={movieData}></HorizontalCardFavPart>
            <Genres genres={movieData?.genres}></Genres>
       </div>
      

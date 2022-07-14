@@ -5,14 +5,18 @@ import { GenreProvider } from './Context/GenresContext';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BasketProvider } from './Context/BasketContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <MovieProvider>
+  <MovieProvider>
+    <BasketProvider>
       <GenreProvider>
         <App />
       </GenreProvider>
-    </MovieProvider>
+    </BasketProvider>
+
+  </MovieProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
