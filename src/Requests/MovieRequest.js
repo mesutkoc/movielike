@@ -11,4 +11,10 @@ export const getMovie = async(itemId)=>{
     return res;
 }
 
+export const getCatMovies = async(catName)=>{
+    const fetchMovies = await fetch(`http://localhost:3000/movies?genres=${catName}`);
+    const res = await fetchMovies.json();
+    return res;
+}
+
 export default getMovies;

@@ -8,6 +8,7 @@ import { useGenre } from './Context/GenresContext';
 import GenresFilters from './Header/GenresFilters';
 import Basket from './Header/Basket';
 import Detail from './Body/DetailPage/Detail';
+import CategoryPage from './Body/CategoryPage/CategoryPage';
 
 function App() {
   const { movies } = useMovie();
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Body movies={movies} genre={genre} />} />
           <Route path="/details/:id" element={<Detail />} />
+          <Route path="/category/:genre" element={<CategoryPage/>} />
         </Routes>
       </div>
     </Router>
