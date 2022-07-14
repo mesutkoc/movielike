@@ -6,4 +6,11 @@ const randomPoint = () => {
 export const scrollPage = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+export const splitGenrePath = (item) => {
+    const genrePathList = item.split(' ');
+    const newList = genrePathList.join('%20');
+    return newList;
+}
+
 export default randomPoint;
