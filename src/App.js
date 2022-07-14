@@ -17,16 +17,16 @@ function App() {
 
   return (
     <Router>
-        <div className="App">
+      <div className="App">
 
-          <Header setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} />
-          {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
-          {showBasket && <Basket></Basket>}
-          <Routes>
-            <Route path="/" exact element={<Body movies={movies} />} />
-            <Route path="/details/:id" element={<Detail />} />
-          </Routes>
-        </div>
+        <Header setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} />
+        {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
+        {showBasket && <Basket></Basket>}
+        <Routes>
+          <Route path="/" exact element={<Body movies={movies} genre={genre} />} />
+          <Route path="/details/:id" element={<Detail />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

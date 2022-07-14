@@ -1,0 +1,20 @@
+.catCard {
+    padding: 20px;
+    cursor: default;
+
+    .catCardImages {
+        display: flex;
+        width: 196px;
+        height: 276px;
+
+        .catImageSizes {
+            width: inherit;
+            height: inherit;
+            border-radius: 25px;
+        }
+    }
+
+    &:hover{
+        background-color: gainsboro;
+    }
+}
