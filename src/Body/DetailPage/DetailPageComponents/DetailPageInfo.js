@@ -6,7 +6,7 @@ function DetailPageInfo({ movieDetail }) {
             <h1 className="movieTitle">{movieDetail?.title}</h1>
             <p><span>Release Date:</span>{movieDetail?.release_date}</p>
             <p className="movieOverview">{movieDetail?.overview}</p>
-            <p><span>Genres:</span> {movieDetail?.genres?.map(genre => (<span>{genre}</span>))}</p>
+            <p><span>Genres:</span> {movieDetail?.genres?.map((genre, index) => (<span key={index}>{genre}</span>))}</p>
         </div>);
 }
 

@@ -15,6 +15,7 @@ function App() {
   const { genre } = useGenre();
   const [showGenreFilters, setGenreFiltersView] = useState(false);
   const [showBasket, setBasketView] = useState(false);
+  const [genrePath, setGenrePath] = useState();
 
   return (
     <Router>
@@ -25,8 +26,8 @@ function App() {
         {showBasket && <Basket></Basket>}
         <Routes>
           <Route path="/" exact element={<Body movies={movies} genre={genre} />} />
-          <Route path="/details/:id" element={<Detail />} />
-          <Route path="/category/:genre" element={<CategoryPage/>} />
+          <Route path={`/category/${genrePath}/details/:id`} element={<Detail />} />
+          <Route path="/category/:genre" element={<CategoryPage setGenrePath={setGenrePath}/>} />
         </Routes>
       </div>
     </Router>
