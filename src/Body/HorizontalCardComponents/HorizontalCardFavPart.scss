@@ -1,39 +1,46 @@
-.favItemss{
+.favItemss {
     height: 50px;
     width: 340px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 15px;
-    
-    .userActions{
+
+    .userActions {
         width: 220px;
         height: 50px;
-        background-color: rgba(255, 255, 255, 0.12);        
+        background-color: rgba(255, 255, 255, 0.12);
         border-radius: 25px;
         display: flex;
         align-items: center;
         justify-content: space-around;
         text-align: center;
 
-        .playIcon{
+        .playIcon {
             width: 30px;
             height: 30px;
             fill: white;
         }
-        .star{
+
+        .star {
             width: 30px;
             height: 30px;
             fill: #FDE936;
         }
-        .heart{
+
+        .heart {
             width: 30px;
             height: 30px;
             fill: #FF0404;
         }
+
+        :is(.playIcon, .star, .heart):hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
     }
 
-    .viewCounts{
+    .viewCounts {
         background: rgba(255, 255, 255, 0.12);
         height: 35px;
         width: 74px;
@@ -42,16 +49,16 @@
         justify-content: space-around;
         border-radius: 25px;
         padding: 0 3px;
-        
-        .eye{
+
+        .eye {
             width: 21px;
             height: 21px;
             fill: white;
         }
 
-        .count{
+        .count {
             color: white;
         }
     }
-   
+
 }
