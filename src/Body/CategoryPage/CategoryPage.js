@@ -35,7 +35,7 @@ function CategoryPage({ setGenrePath }) {
     return <div className="categoryPage">
         {currentMovie?.map((movieData, index) =>
             <HorizontalCard movieData={movieData} key={index}></HorizontalCard>)}
-        {pagenumber.length > 0 && <Pagination pagenumber={pagenumber} handleClick={handleClick} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
+        {pagenumber.length > 1 && <Pagination pagenumber={pagenumber} handleClick={handleClick} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
     </div>;
 }
 
