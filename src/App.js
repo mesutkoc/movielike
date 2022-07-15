@@ -16,7 +16,7 @@ import WatchMovie from './Body/WatchPart/WatchMovie';
 function App() {
   const { movies } = useMovie();
   const { genre } = useGenre();
-  const { basket } = useBasket();
+  const { basket, setBasket } = useBasket();
   const [showGenreFilters, setGenreFiltersView] = useState(false);
   const [showBasket, setBasketView] = useState(false);
   const [genrePath, setGenrePath] = useState();
@@ -27,7 +27,7 @@ function App() {
 
         <Header setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} />
         {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
-        {showBasket && <Basket basket={basket}></Basket>}
+        {showBasket && <Basket basket={basket} setBasket={setBasket}></Basket>}
         <Routes>
           <Route path="/" exact element={<Body movies={movies} genre={genre} />} />
           <Route path={`/category/${genrePath}/details/:id`} element={<Detail />} />

@@ -1,6 +1,5 @@
 .basket{
     position: absolute;
-    width: 300px;
     z-index: 1;
     background-color: inherit;
     border-radius: 10px;
@@ -9,7 +8,11 @@
 
     .basketList{
         list-style: none;
-    
+        
+        .emptyBasket{
+            margin-right: 25px;
+        }
+
         .basketItem{
             display: flex;
             align-items: center;
@@ -20,6 +23,28 @@
 
             &:hover{
                 cursor: default;
+            }
+
+            .basketMovieTitle{
+                width: 200px;
+                margin-right: 60px;
+            }
+             
+            .removeItem{
+                font-size: 12px;
+                position: absolute;
+                right: 10px;
+                padding: 4px;
+                border: 1px solid black;
+                border-radius: 5px;
+
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.2);
+                    border: 1px solid white;
+                    color: white;
+                    background-color: black;
+                }
             }
         }
 
