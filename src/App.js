@@ -25,7 +25,7 @@ function App() {
     <Router>
       <div className="App">
 
-        <Header setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} />
+        <Header basket={basket} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} />
         {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
         {showBasket && <Basket basket={basket} setBasket={setBasket}></Basket>}
         <Routes>

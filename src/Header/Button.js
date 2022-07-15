@@ -1,7 +1,8 @@
 import React from "react";
 import "./Button.scss"
 
-function Button({ type, showGenreFilters, setGenreFiltersView, showBasket, setBasketView }) {
+function Button({ type, showGenreFilters, setGenreFiltersView, showBasket, setBasketView, basket }) {
+
   const showGenresList = (type) => {
     if (type === 'Genres') {
       setBasketView(false);
@@ -11,11 +12,12 @@ function Button({ type, showGenreFilters, setGenreFiltersView, showBasket, setBa
       setGenreFiltersView(false);
       showBasket === false ? setBasketView(true) : setBasketView(false)
     }
-
-
-
   }
-  return <div className="headerButton" onClick={() => showGenresList(type)}><button className={`button${type}`}>{type}</button></div>;
+  
+  return <div className="headerButton" onClick={() => showGenresList(type)}>
+          <button className={`button${type}`}>{type}</button>
+          {type === "Basket" && <div className="basketLength">{basket?.length}</div>}
+        </div>;
 }
 
 Button.defaultProps = {

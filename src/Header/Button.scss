@@ -1,12 +1,21 @@
+.headerButtonGroup{
+    display: flex;
+    margin-left: 40px;
+}
 
 .headerButton{
-    
-    .buttonGenres{
-        position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:first-child){
+        margin-left: 10px;
+    }
+
+    :is(.buttonGenres, .buttonBasket){
+        position: relative;
         width: 168px;
         height: 40px;
-        left: 1020px;
-        top: 30px;
         background: #FFFFFF;
         border-style: none;
         border-radius: 25px;
@@ -18,24 +27,20 @@
         color: #B80000;
     }
 
-    .buttonBasket{
+    .basketLength{
+        background-color: gainsboro;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        width: 168px;
-        height: 40px;
-        left: 1203px;
-        top: 30px;
-        background: #FFFFFF;
-        border-style: none;
-        border-radius: 25px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        color: #B80000;
+        right: 45px;
+        
     }
 
-    :is(.buttonBasket, .buttonGenres):hover{
+    :is(.buttonBasket, .buttonGenres, .basketLength):hover{
         cursor: pointer;
     }
 }
