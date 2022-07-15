@@ -13,7 +13,8 @@ function HorizontalCardFavPart({ movieData }) {
   const point = randomPoint();
 
   const addBasket = (item) => {
-    setBasket([...basket, item])
+    const datas = basket?.find(movie => movie.id === item.id);
+    (item.id !== datas?.id || basket.length === 0) && setBasket([...basket, item])
   }
 
   return (<div className="favItemss">
