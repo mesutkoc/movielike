@@ -1,6 +1,7 @@
+@import "../../typeConstants";
 .catCard {
     padding: 20px;
-    cursor: default;
+    cursor: pointer;
 
     .catCardImages {
         display: flex;
@@ -14,7 +15,14 @@
         }
     }
 
-    &:hover{
+    
+}
+
+.categoryLink {
+    text-decoration: none;
+    color: $black-color;
+    
+    &:hover {
         background-color: gainsboro;
     }
 }

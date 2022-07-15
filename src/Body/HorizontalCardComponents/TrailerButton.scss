@@ -1,3 +1,5 @@
+@import '../../typeConstants';
+
 .trailerButton{
     width: 330px;
     height: 60px;
@@ -7,7 +9,7 @@
     justify-content: space-between;
 
     .button{
-        background: #B80000;
+        background: $detailButton-color;
         border-style: none;
         border-radius: 25px;
         font-family: 'Roboto';

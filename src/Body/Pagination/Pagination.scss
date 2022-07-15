@@ -1,23 +1,25 @@
+@import "../../typeConstants";
+
 .pagination{
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
     
     .paginationListItem{
         padding:8px 14px;
         font-size:20px;
-        border: 1px solid #000000;
+        border: 1px solid $nav-color;
         border-radius: 20px;
-        color: #000000;
+        color: $nav-color;
     }
     .paginationListItemActive{
         padding:8px 14px;
         font-size:20px;
-        border: 1px solid #000000;
+        border: 1px solid $nav-color;
         border-radius: 20px;
-        background-color: #000000;
+        background-color: $nav-color;
         color:white;
-        opacity: 0.2;
+        opacity: 0.7;
     }
 
     .paginationListItem:not(:first-child){
@@ -29,9 +31,9 @@
 
     .paginationListItem:hover{
         cursor: pointer;
-        background-color: #000000;
+        background-color: $nav-color;
         color:white;
-        opacity: 0.2;
+        opacity: 0.7;
     }
     .paginationListItemActive:hover{
         cursor: pointer;
@@ -49,7 +51,8 @@
         border: 1px solid #000000;
         border-radius: 20px;
     }
-    .prev:hover, .next:hover{
+
+    :is(.prev, .next):hover{
         cursor: pointer;
         transform: scale(1.3);
     }

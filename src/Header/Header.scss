@@ -1,8 +1,11 @@
+@import '../typeConstants';
+
 .rootHeader{
-    background-color: #B80000;
+    background-color: $nav-color;
     display: flex;
     flex-direction: row;
     height: 100px;
+    align-items: center;
 
     .headerTitlelink{
         font-style: italic;
@@ -11,7 +14,7 @@
         font-weight: 800;
         display: flex;
         text-align: center;
-        color: #FFFFFF;
+        color: $black-color;
         margin-left: 39px;
         cursor: pointer;
         text-decoration: none;
@@ -35,7 +38,7 @@
         }
         
         .headerInput::placeholder{
-            color: #B80000;
+            color: $black-color;
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
@@ -49,7 +52,7 @@
         .headerSearchButton{
             background: #FFFFFF;
             border-style: none;
-            color: #B80000;
+            color: $black-color;
             border-radius: 0px 25px 25px 0px;
             padding: 0 10px;
             margin-left: 1px;
@@ -57,10 +60,14 @@
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 800;
-            font-size: 24px;
+            font-size: 22px;
             line-height: 28px;
             align-items: center;
-            text-align: center;        
+            text-align: center;       
+            
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
     
