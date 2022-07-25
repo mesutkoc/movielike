@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Routes_Const } from "./constants";
 import './App.scss';
 import Body from './Body/Body';
 import Header from "./Header/Header"
@@ -24,15 +25,14 @@ function App() {
 
   const ROUTES = {
     component1: {id: "1", path: "/", element: <Body movies={movies} genre={genre}/>},
-    component2: {id: "2", path: `/category/${genrePath}/details/:id`, element: <Detail />},
-    component3: {id: "3", path: "/category/:genre", element: <CategoryPage setGenrePath={setGenrePath}/>},
-    component4: {id: "4", path: "/watch/:id", element: <WatchMovie/>},
+    component2: {id: "2", path: `/${Routes_Const.CATEGORY}/${genrePath}/${Routes_Const.DETAILS}/${Routes_Const.ID}`, element: <Detail />},
+    component3: {id: "3", path: `/${Routes_Const.CATEGORY}/:${Routes_Const.GENRE}`, element: <CategoryPage setGenrePath={setGenrePath}/>},
+    component4: {id: "4", path: `/${Routes_Const.WATCH}/${Routes_Const.ID}`, element: <WatchMovie/>},
   }
 
   return (
     <Router>
       <div className="App">
-
         <Header basket={basket} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} />
         {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
         {showBasket && <Basket basket={basket} setBasket={setBasket}></Basket>}
