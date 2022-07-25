@@ -12,7 +12,7 @@ User can add movies basket to watch later or remove movies from basket.
 
 First, clone this [repository](https://github.com/mesutkoc/movielike.git).
 
-`git clone https://github.com/patika-hepsiburada-react-bootcamp/hepsiburada-case-mesutkoc.git`
+`git clone https://github.com/mesutkoc/movielike.git`
 
 Install npm
 
