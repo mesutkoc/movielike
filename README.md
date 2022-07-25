@@ -40,9 +40,13 @@ To run tests.
 
 `npm run test`
 
+---
 **NOTE**
+
 First run json-server, then run project.
 This application uses 2 ports. One of them is runnig on PORT=3001.
 If you are not use mac OS, please go package.json file and delete "PORT=3001" from start script.
 
 It should be `"start": "react-scripts start"` 
+
+---
