@@ -21,6 +21,14 @@ function App() {
   const [showBasket, setBasketView] = useState(false);
   const [genrePath, setGenrePath] = useState();
 
+
+  const ROUTES = {
+    component1: {id: "1", path: "/", element: <Body movies={movies} genre={genre}/>},
+    component2: {id: "2", path: `/category/${genrePath}/details/:id`, element: <Detail />},
+    component3: {id: "3", path: "/category/:genre", element: <CategoryPage setGenrePath={setGenrePath}/>},
+    component4: {id: "4", path: "/watch/:id", element: <WatchMovie/>},
+  }
+
   return (
     <Router>
       <div className="App">
@@ -29,10 +37,9 @@ function App() {
         {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
         {showBasket && <Basket basket={basket} setBasket={setBasket}></Basket>}
         <Routes>
-          <Route path="/" exact element={<Body movies={movies} genre={genre} />} />
-          <Route path={`/category/${genrePath}/details/:id`} element={<Detail />} />
-          <Route path="/category/:genre" element={<CategoryPage setGenrePath={setGenrePath}/>} />
-          <Route path= "/watch/:id" element={<WatchMovie/>}/>
+          {Object.entries(ROUTES).map((route) => {
+            return <Route key={route[1].id} path={route[1].path} element={route[1].element}></Route>
+          } )}
         </Routes>
       </div>
     </Router>
