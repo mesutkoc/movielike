@@ -9,7 +9,7 @@ import "./CategoryPage.scss"
 function CategoryPage({ setGenrePath }) {
     const { genre } = useParams();
     const [catMovies, setCatMovies] = useState([])
-
+    
     useEffect(() => {
         const datas = splitGenrePath(genre);
         getCatMovies(genre).then(res => setCatMovies(res));
@@ -35,7 +35,7 @@ function CategoryPage({ setGenrePath }) {
     return <div className="categoryPage">
         {currentMovie?.map((movieData, index) =>
             <HorizontalCard movieData={movieData} key={index}></HorizontalCard>)}
-        {pagenumber.length > 1 && <Pagination pagenumber={pagenumber} handleClick={handleClick} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
+        {pagenumber.length > 1 && <Pagination genre={genre} pagenumber={pagenumber} handleClick={handleClick} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
     </div>;
 }
 
