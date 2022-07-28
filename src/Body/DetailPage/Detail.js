@@ -6,12 +6,12 @@ import DetailPageInfo from "./DetailPageComponents/DetailPageInfo";
 import "./Detail.scss";
 
 function Detail() {
-  const movieItem = useParams();
+  const { id } = useParams();
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
-    getMovie(movieItem.id).then(res => setMovie(res));
-  }, [movieItem.id])
+    getMovie(id).then(res => setMovie(res));
+  }, [id])
 
   return (
     <div className="detailPageRoot">

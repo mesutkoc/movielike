@@ -7,14 +7,14 @@ import Pagination from "../Pagination/Pagination";
 import "./CategoryPage.scss"
 
 function CategoryPage({ setGenrePath }) {
-    const categoryMovies = useParams();
+    const { genre } = useParams();
     const [catMovies, setCatMovies] = useState([])
 
     useEffect(() => {
-        const datas = splitGenrePath(categoryMovies.genre);
-        getCatMovies(categoryMovies.genre).then(res => setCatMovies(res));
+        const datas = splitGenrePath(genre);
+        getCatMovies(genre).then(res => setCatMovies(res));
         setGenrePath(datas)
-    }, [categoryMovies, setGenrePath])
+    }, [genre, setGenrePath])
 
     const [currentPage, setCurrentPage] = useState(1);
     const moviesPerPage = 16;
