@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCatMovies } from "../../Requests/MovieRequest";
-import { scrollPage, splitGenrePath } from "../../helpers";
+import { scrollPage } from "../../helpers";
 import HorizontalCard from "../HorizontalCard/HorizontalCard";
 import Pagination from "../Pagination/Pagination";
 import "./CategoryPage.scss"
@@ -11,10 +11,8 @@ function CategoryPage({ setGenrePath }) {
     const [catMovies, setCatMovies] = useState([])
     
     useEffect(() => {
-        const datas = splitGenrePath(genre);
         getCatMovies(genre).then(res => setCatMovies(res));
-        setGenrePath(datas)
-    }, [genre, setGenrePath])
+    }, [genre])
 
     const [currentPage, setCurrentPage] = useState(1);
     const moviesPerPage = 16;
