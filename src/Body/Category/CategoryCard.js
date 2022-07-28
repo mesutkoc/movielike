@@ -6,7 +6,7 @@ import "./CategoryCard.scss";
 function CategoryCard({ genreItem }) {
     const { page = 0 } = useParams();
     
-    return <Link to={`${Routes_Const.CATEGORY}/${genreItem?.genre}/${page}`} className="categoryLink">
+    return <Link to={`${Routes_Const.CATEGORY}/${genreItem?.genre}&${Routes_Const.PAGE}=${page}`} className="categoryLink">
                 <div className="catCard">
                 <div className="catCardImages"><img className="catImageSizes" src={genreItem?.poster} alt="error"></img></div>
                     <p>{genreItem?.genre}</p>

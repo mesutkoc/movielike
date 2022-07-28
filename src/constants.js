@@ -3,7 +3,8 @@ const Routes_Const = {
     GENRE: 'genre',
     WATCH: 'watch',
     DETAILS: 'details',
-    ID: ':id'
+    ID: ':id',
+    PAGE: 'page'
 }
 
 export { Routes_Const } 

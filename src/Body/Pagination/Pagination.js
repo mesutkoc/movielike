@@ -19,11 +19,11 @@ function Pagination({ pagenumber, handleClick, currentPage, setCurrentPage, genr
     }
 
     return <div className="pagination">
-        <Link to={`/${Routes_Const.CATEGORY}/${genre}/${currentPage}`}><div className="prev" onClick={() => selectPage("prev")}><span>-</span></div></Link>
+        <Link to={`/${Routes_Const.CATEGORY}/${genre}&${Routes_Const.PAGE}=${currentPage}`}><div className="prev" onClick={() => selectPage("prev")}><span>-</span></div></Link>
         <div className="paginationList">
             {pagenumber.map((item, index) => <span className={`paginationListItem${item === currentPage ? "Active" : ""}`} key={index + 1} onClick={() => handleClick(item)}>{item}</span>)}
         </div>
-        <Link to={`/${Routes_Const.CATEGORY}/${genre}/${currentPage}`}><div className="next" onClick={() => selectPage('next')}><span>+</span></div></Link>
+        <Link to={`/${Routes_Const.CATEGORY}/${genre}&${Routes_Const.PAGE}=${currentPage}`}><div className="next" onClick={() => selectPage('next')}><span>+</span></div></Link>
     </div>;
 }
 
