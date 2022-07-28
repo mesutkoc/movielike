@@ -6,7 +6,7 @@ import HorizontalCard from "../HorizontalCard/HorizontalCard";
 import Pagination from "../Pagination/Pagination";
 import "./CategoryPage.scss"
 
-function CategoryPage({ setGenrePath }) {
+function CategoryPage() {
     const { genre } = useParams();
     const [catMovies, setCatMovies] = useState([])
     

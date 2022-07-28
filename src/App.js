@@ -20,13 +20,11 @@ function App() {
   const { basket, setBasket } = useBasket();
   const [showGenreFilters, setGenreFiltersView] = useState(false);
   const [showBasket, setBasketView] = useState(false);
-  const [genrePath, setGenrePath] = useState();
-
 
   const ROUTES = {
     component1: {id: "1", path: "/", element: <Body movies={movies} genre={genre}/>},
     component2: {id: "2", path: `/${Routes_Const.DETAILS}/${Routes_Const.ID}`, element: <Detail />},
-    component3: {id: "3", path: `/${Routes_Const.CATEGORY}/:${Routes_Const.GENRE}/:page`, element: <CategoryPage setGenrePath={setGenrePath}/>},
+    component3: {id: "3", path: `/${Routes_Const.CATEGORY}/:${Routes_Const.GENRE}/:page`, element: <CategoryPage/>},
     component4: {id: "4", path: `/${Routes_Const.WATCH}/${Routes_Const.ID}`, element: <WatchMovie/>},
   }
 
