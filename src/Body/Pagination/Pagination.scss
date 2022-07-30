@@ -4,7 +4,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
-    
+
+    .paginationList{
+        text-decoration: none;
+    }
+     
     .paginationListItem{
         padding:8px 14px;
         font-size:20px;
