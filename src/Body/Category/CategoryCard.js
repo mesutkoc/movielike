@@ -4,7 +4,7 @@ import { Routes_Const } from "../../constants";
 import "./CategoryCard.scss";
 
 function CategoryCard({ genreItem }) {
-    const { page = 0 } = useParams();
+    const { page = 1 } = useParams();
     
     return <Link to={`${Routes_Const.CATEGORY}/${genreItem?.genre}&${Routes_Const.PAGE}=${page}`} className="categoryLink">
                 <div className="catCard">
