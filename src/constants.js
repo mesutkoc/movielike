@@ -7,4 +7,9 @@ const Routes_Const = {
     PAGE: 'page'
 }
 
-export { Routes_Const } 
+const Data_Url = {
+    DATA_URL : 'http://localhost:3000',
+    MOVIES: 'movies'
+}
+
+export { Routes_Const, Data_Url } 

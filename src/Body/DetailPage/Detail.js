@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getMovie } from "../../Requests/MovieRequest";
+import { getMovieByID } from "../../Requests/MovieRequest";
 import DetailImage from "./DetailPageComponents/DetailImage";
 import DetailPageInfo from "./DetailPageComponents/DetailPageInfo";
 import "./Detail.scss";
@@ -10,7 +10,7 @@ function Detail() {
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
-    getMovie(id).then(res => setMovie(res));
+    getMovieByID(id).then(res => setMovie(res));
   }, [id])
 
   return (

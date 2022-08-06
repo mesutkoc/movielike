@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getMovie } from "../../Requests/MovieRequest";
+import { getMovieByID } from "../../Requests/MovieRequest";
 
 function WatchMovie() {
     const [movie, setMovie] = useState({});
     const movieItem = useParams();
     
     useEffect(() => {
-        getMovie(movieItem.id).then(res => setMovie(res));
+        getMovieByID(movieItem.id).then(res => setMovie(res));
     }, [movieItem.id])
 
 

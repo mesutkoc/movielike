@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getCatMovies } from "../../Requests/MovieRequest";
+import { getMoviesByCat } from "../../Requests/MovieRequest";
 import HorizontalCard from "../HorizontalCard/HorizontalCard";
 import Pagination from "../Pagination/Pagination";
 import "./CategoryPage.scss"
@@ -10,7 +10,7 @@ function CategoryPage() {
     const [catMovies, setCatMovies] = useState([])
     
     useEffect(() => {
-        getCatMovies(genre).then(res => setCatMovies(res));
+        getMoviesByCat(genre).then(res => setCatMovies(res));
     }, [genre])
 
     const [currentPage, setCurrentPage] = useState(1);
