@@ -28,19 +28,15 @@
             height: 40px;
             font-size: 24px;
             text-align: center;
-            align-items: center;
-        }
-        
-        .headerInput::placeholder{
-            color: $black-color;
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 28px;
-            display: flex;
-            text-align: center;
-            align-items: center;
+
+            &::placeholder{
+                color: $black-color;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+            }
         }
 
         .headerSearchButton{
