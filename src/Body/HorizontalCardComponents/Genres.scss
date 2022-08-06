@@ -1,10 +1,11 @@
 .genresTable{
     width: 350px;
-    height: 40px;
+    height: 80px;
     display: flex;
-    align-items: center;
-    margin-top: 20px;
-
+    align-items: flex-start;
+    margin-top: 15px;
+    flex-flow: row wrap;
+    
     .genreType{
         color: #FFFFFF;
         background: rgba(255, 255, 255, 0.12);
