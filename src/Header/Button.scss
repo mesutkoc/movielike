@@ -1,20 +1,11 @@
 @import "../typeConstants";
 
-.headerButtonGroup{
-    display: flex;
-    margin-left: 40px;
-}
-
 .headerButton{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &:not(:first-child){
-        margin-left: 10px;
-    }
-
-    :is(.buttonGenres, .buttonBasket){
+    :is(.buttonBasket){
         position: relative;
         width: 168px;
         height: 40px;
@@ -30,6 +21,7 @@
     }
 
     .basketLength{
+        position: absolute;
         background-color: gainsboro;
         width: 20px;
         height: 20px;
@@ -37,12 +29,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        right: 55px;
-        
+        margin-left: 100px;
     }
 
-    :is(.buttonBasket, .buttonGenres, .basketLength):hover{
+    :is(.buttonBasket, .basketLength):hover{
         cursor: pointer;
     }
 }

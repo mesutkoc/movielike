@@ -9,10 +9,7 @@ function Header({ setGenreFiltersView, showGenreFilters, showBasket, setBasketVi
     <div className="rootHeader">
       <Link to="/" className="headerTitlelink">MOVIELIKE</Link>
       <SearchBox></SearchBox>
-      <div className="headerButtonGroup">
-        <Button type={"Genres"} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView}></Button>
-        <Button type={"Basket"} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} basket={basket}></Button>
-      </div>
+      <Button type={"Basket"} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} basket={basket}></Button>
     </div>);
 }
 export default memo(Header);

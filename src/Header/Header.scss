@@ -3,30 +3,24 @@
 .rootHeader{
     background-color: $nav-color;
     display: flex;
-    flex-direction: row;
     height: 100px;
+    justify-content: space-around;
     align-items: center;
-
+    
     .headerTitlelink{
         font-style: italic;
-        align-items: center;
         font-size: 50px;
         font-weight: 800;
-        display: flex;
-        text-align: center;
         color: $black-color;
-        margin-left: 39px;
         cursor: pointer;
         text-decoration: none;
     }
    
     .searchbox{
-        margin-left: 61px;
-        align-items: center;
         display: flex;
-
+        align-items: center;
+        
         .headerInput{
-            margin: 0 auto;
             background: #FFFFFF;
             border-style: none;
             border-radius: 25px 0px 0px 25px;

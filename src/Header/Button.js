@@ -1,13 +1,9 @@
 import React from "react";
 import "./Button.scss"
 
-function Button({ type, showGenreFilters, setGenreFiltersView, showBasket, setBasketView, basket }) {
+function Button({ type, setGenreFiltersView, showBasket, setBasketView, basket }) {
 
   const showGenresList = (type) => {
-    if (type === 'Genres') {
-      setBasketView(false);
-      showGenreFilters === false ? setGenreFiltersView(true) : setGenreFiltersView(false)
-    }
     if (type === 'Basket') {
       setGenreFiltersView(false);
       showBasket === false ? setBasketView(true) : setBasketView(false)

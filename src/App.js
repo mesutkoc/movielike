@@ -7,7 +7,6 @@ import Header from "./Header/Header"
 import { useMovie } from './Context/MovieContext';
 import { useGenre } from './Context/GenresContext';
 import { useBasket } from './Context/BasketContext';
-import GenresFilters from './Header/GenresFilters';
 import Basket from './Header/Basket';
 import Detail from './Body/DetailPage/Detail';
 import CategoryPage from './Body/CategoryPage/CategoryPage';
@@ -32,7 +31,6 @@ function App() {
     <Router>
       <div className="App">
         <Header basket={basket} setGenreFiltersView={setGenreFiltersView} showGenreFilters={showGenreFilters} showBasket={showBasket} setBasketView={setBasketView} />
-        {showGenreFilters && <GenresFilters genre={genre}></GenresFilters>}
         {showBasket && <Basket basket={basket} setBasket={setBasket}></Basket>}
         <Routes>
           {Object.entries(ROUTES).map((route) => {
