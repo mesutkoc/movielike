@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { getMoviesByCat } from "../../Requests/MovieRequest";
 import HorizontalCard from "../HorizontalCard/HorizontalCard";
 import Pagination from "../Pagination/Pagination";
+import SearchResult from "../SearchResult/SearchResult";
 import "./CategoryPage.scss"
 
 function CategoryPage() {
     const { genre } = useParams();
     const [catMovies, setCatMovies] = useState([])
-    
     useEffect(() => {
         getMoviesByCat(genre).then(res => setCatMovies(res));
     }, [genre])
@@ -25,10 +25,15 @@ function CategoryPage() {
     }
 
     return <div className="categoryPage">
-        {currentMovie?.map((movieData, index) =>
-            <HorizontalCard movieData={movieData} key={index}></HorizontalCard>)}
-        {pagenumber.length > 1 && <Pagination genre={genre} pagenumber={pagenumber} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
+        {catMovies.length !== 0 && <SearchResult searchResult={catMovies.length} genre={genre}></SearchResult>}
+        <div className="categoryMovies">
+            {currentMovie?.map((movieData, index) =>
+             <HorizontalCard movieData={movieData} key={index}></HorizontalCard>)}
+            {pagenumber.length > 1 && <Pagination genre={genre} pagenumber={pagenumber} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
+        </div>
+        
     </div>;
 }
 
 export default CategoryPage;
+ 

@@ -16,7 +16,6 @@ function Pagination({ pagenumber, currentPage, setCurrentPage, genre }) {
             scrollPage();
         }
         if (item) {
-            console.log(item);
             setCurrentPage(Number(item));
             scrollPage();
         }
