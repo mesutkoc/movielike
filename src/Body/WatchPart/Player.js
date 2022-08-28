@@ -41,7 +41,9 @@ function Player({ movie, setLoading, setScreen, fullscreen }) {
                 <Sound className={`playerSound ${showSound}`} onClick={() => sound('off')}></Sound>
                 <SoundDisable className={`playerSound ${!showSound}`} onClick={() => sound('on')}></SoundDisable>
             </div>
-
+            <div className="timer">
+               <div className="timerPart">00:00 / 00:00</div> 
+            </div>
         </div>
         <div className="movieName">
             <h5>{movie?.title}</h5>

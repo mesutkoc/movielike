@@ -59,8 +59,12 @@
         .control{
             margin-left: 20px;
             display: flex;
-            
+            align-items: center;
+
             .play{
+                display: inherit;
+                align-items: inherit;
+                
                 .playerPlay{
                     width: 30px;
                     height: 30px;
@@ -74,7 +78,9 @@
             
             .sound{
                 margin-left: 15px;
-              
+                display: inherit;
+                align-items: inherit;
+
                 .playerSound{
                     width: 30px;
                     height: 30px;
@@ -83,6 +89,15 @@
                     &.false{
                         display: none;
                     }
+                }
+            }
+
+            .timer{
+                margin-left: 15px;
+
+                .timerPart{
+                    font-size: 18px;
+                    color: white;
                 }
             }
             

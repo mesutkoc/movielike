@@ -6,7 +6,7 @@ import "./WatchPart.scss";
 function Screen({movie, setScreen, fullscreen}) {
 
   const [loader, setLoading] = useState(false)
-  console.log(fullscreen);
+
   return <div className={`watchScreen ${fullscreen}`}>
         <div className="signalError"></div>
         <Loader loader={loader}></Loader>
