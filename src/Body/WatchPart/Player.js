@@ -3,8 +3,9 @@ import { ReactComponent as Play } from "../../Icons/playButton.svg";
 import { ReactComponent as Pause } from "../../Icons/pause.svg";
 import { ReactComponent as Sound } from "../../Icons/sound.svg";
 import { ReactComponent as SoundDisable } from "../../Icons/soundDisable.svg"
+import { ReactComponent as FullScreen } from "../../Icons/fullScreen.svg"
 
-function Player({ movie, setLoading }) {
+function Player({ movie, setLoading, setScreen, fullscreen }) {
 
     const [showPlay, setPlay] = useState(true);
     const [showSound, setSound] = useState(true);
@@ -26,6 +27,10 @@ function Player({ movie, setLoading }) {
         sound === 'off' ? setSound(false) : setSound(true)
     }
 
+    const screenSize = () => {
+        fullscreen === false ? setScreen(true) : setScreen(false); 
+    }
+
     return <div className="player">
         <div className="control">
             <div className="play">
@@ -42,7 +47,7 @@ function Player({ movie, setLoading }) {
             <h5>{movie?.title}</h5>
         </div>
         <div className="showRecommend">
-            <h5>Show Reco</h5>
+            <FullScreen className="fullScreen" onClick={()=>screenSize()}></FullScreen>
         </div>
     </div>
 }

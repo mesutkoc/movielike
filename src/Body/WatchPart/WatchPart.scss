@@ -5,12 +5,18 @@
     display: flex;
     justify-content: space-between;
 }
+
 .watchScreen{
     width: 1000px;
     height: 600px;
     display: inherit;
     justify-content: center;
     align-items: flex-end;
+
+    &.false{
+        width: 1400px;
+        height: 600px;
+    }
 
     .signalError{
         position: absolute;
@@ -59,7 +65,6 @@
                     width: 30px;
                     height: 30px;
                     fill: white;
-                    cursor: pointer;
 
                     &.false{
                         display: none;
@@ -74,7 +79,6 @@
                     width: 30px;
                     height: 30px;
                     fill: white;
-                    cursor: pointer;
 
                     &.false{
                         display: none;
@@ -89,10 +93,16 @@
             color: white;
         }
 
-        .showRecommend > h5{
-            font-size: 20px;
-            color: white;
+        .fullScreen{
+            fill: white;
+            width: 30px;
+            height: 30px;
             margin-right: 20px;
+        }
+
+        :is(.playerPlay, .playerSound, .fullScreen):hover{
+            transform: scale(1.2);
+            cursor: pointer;
         }
     }
 }
@@ -103,4 +113,8 @@
     width: 380px;
     height: 600px;
     background-color: $black-color;
+
+    &.false{
+        display: none;
+    }
 }

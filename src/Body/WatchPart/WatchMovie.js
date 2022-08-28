@@ -6,6 +6,8 @@ import Screen from "./Screen";
 
 function WatchMovie() {
     const [movie, setMovie] = useState({});
+    const [fullscreen, setScreen] = useState(true);
+
     const movieItem = useParams();
     
     useEffect(() => {
@@ -14,8 +16,8 @@ function WatchMovie() {
 
 
     return <div className="watchPart"> 
-        <Screen movie={movie}></Screen>
-        <RecommendedPart></RecommendedPart>
+        <Screen movie={movie} setScreen={setScreen} fullscreen={fullscreen}></Screen>
+        <RecommendedPart fullscreen={fullscreen}></RecommendedPart>
     </div>;
 }
 

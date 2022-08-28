@@ -1,8 +1,8 @@
 import React from "react";
 import "./WatchPart.scss";
 
-function RecommendedPart() {
-  return <div className="recommendPart">RecommendedPart</div>;
+function RecommendedPart({fullscreen}) {
+  return <div className={`recommendPart ${fullscreen}`}>RecommendedPart</div>;
 }
 
 export default RecommendedPart;
