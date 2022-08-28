@@ -28,9 +28,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        z-index: 1;
         .control{
-            margin-left: 10px;
+            margin-left: 20px;
             display: flex;
             
             .play{
@@ -48,7 +48,7 @@
             }
             
             .sound{
-                margin-left: 10px;
+                margin-left: 15px;
               
                 .playerSound{
                     width: 40px;
