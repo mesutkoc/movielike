@@ -14,7 +14,7 @@ function WatchMovie() {
 
 
     return <div className="watchPart"> 
-        <Screen></Screen>
+        <Screen movie={movie}></Screen>
         <RecommendedPart></RecommendedPart>
     </div>;
 }
