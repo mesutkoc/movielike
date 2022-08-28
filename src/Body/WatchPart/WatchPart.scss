@@ -10,7 +10,7 @@
     height: 600px;
     display: inherit;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     .signalError{
         position: absolute;
@@ -21,29 +21,49 @@
         opacity: 0.15;
     }
 
-    .player{
+    .loader{
+        position:absolute;
+        margin-bottom: 270px;
+        border: 10px solid #EAF0F6;
+        border-radius: 50%;
+        border-top: 10px solid $nav-color;
+        width: 100px;
         height: 100px;
+        animation: spinner 4s linear infinite;
+
+        &.false{
+            display: none;
+        }
+    }
+
+    @keyframes spinner {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .player{
+        height: 80px;
         width: inherit;
         background: rgba(0, 0, 0, 0.642);
         display: flex;
         align-items: center;
         justify-content: space-between;
         z-index: 1;
+
         .control{
             margin-left: 20px;
             display: flex;
             
             .play{
                 .playerPlay{
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                     fill: white;
                     cursor: pointer;
 
                     &.false{
                         display: none;
-                    }
-        
+                    }      
                 }
             }
             
@@ -51,8 +71,8 @@
                 margin-left: 15px;
               
                 .playerSound{
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                     fill: white;
                     cursor: pointer;
 
@@ -72,6 +92,7 @@
         .showRecommend > h5{
             font-size: 20px;
             color: white;
+            margin-right: 20px;
         }
     }
 }

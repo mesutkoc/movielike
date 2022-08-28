@@ -4,19 +4,26 @@ import { ReactComponent as Pause } from "../../Icons/pause.svg";
 import { ReactComponent as Sound } from "../../Icons/sound.svg";
 import { ReactComponent as SoundDisable } from "../../Icons/soundDisable.svg"
 
-function Player({ movie }) {
+function Player({ movie, setLoading }) {
 
     const [showPlay, setPlay] = useState(true);
     const [showSound, setSound] = useState(true);
 
     const playMovie = (type) => {
-        console.log(type);
-        type === 'play' ? setPlay(false) : setPlay(true)
+        if (type === 'play') {
+            setPlay(false);
+            setLoading(true) 
+            setTimeout(() => {
+                setPlay(true);
+                setLoading(false)
+            }, 4000)
+        } else {
+            setPlay(true)
+        }
     }
 
-    const sound = (type) => {
-        console.log(type);
-        type === 'off' ? setSound(false) : setSound(true)
+    const sound = (sound) => {
+        sound === 'off' ? setSound(false) : setSound(true)
     }
 
     return <div className="player">

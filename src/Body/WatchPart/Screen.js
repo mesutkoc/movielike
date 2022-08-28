@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import Loader from "./Loader";
 import Player from "./Player";
 import "./WatchPart.scss";
 
 function Screen({movie}) {
+
+  const [loader, setLoading] = useState(false)
+
   return <div className="watchScreen">
         <div className="signalError"></div>
-        <Player movie={movie}></Player>
+        <Loader loader={loader}></Loader>
+        <Player movie={movie} setLoading={setLoading}></Player>
     </div>;
 }
 
