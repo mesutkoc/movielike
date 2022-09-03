@@ -6,14 +6,37 @@
     height: 100px;
     justify-content: space-around;
     align-items: center;
-    
+
+    .logo{
+        width: 70px;
+        height: 70px;
+        background-image: url('../Images/video-camera-small.png');
+        background-repeat: no-repeat;
+        background-size: 70px;
+        border-radius: 50%;
+        border: 3px solid $black-color;
+    }
+
     .headerTitlelink{
+        display: flex;
+        align-items: center;
         font-style: italic;
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 800;
         color: $black-color;
         cursor: pointer;
         text-decoration: none;
+
+        .logo{
+            width: 60px;
+            height: 60px;
+            background-image: url('../Images/video-camera-small.png');
+            background-repeat: no-repeat;
+            background-size: 60px;
+            border-radius: 50%;
+            border: 3px solid $black-color;
+            margin-right: 10px;
+        }
     }
    
     .searchbox{
@@ -21,44 +44,23 @@
         align-items: center;
         
         .headerInput{
-            background: #FFFFFF;
+            background-color: #FFFFFF;
             border-style: none;
-            border-radius: 25px 0px 0px 25px;
-            padding: 0 130px;
+            border-radius: 25px;
+            width: 500px;
             height: 40px;
-            font-size: 24px;
-            text-align: center;
+            font-size: 20px;
+            padding: 0 20px;
 
             &::placeholder{
                 color: $black-color;
                 font-family: 'Roboto';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 24px;
-                line-height: 28px;
+                font-size: 20px;
             }
         }
 
-        .headerSearchButton{
-            background: #FFFFFF;
-            border-style: none;
-            color: $black-color;
-            border-radius: 0px 25px 25px 0px;
-            padding: 0 10px;
-            margin-left: 1px;
-            height: 40px;
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 22px;
-            line-height: 28px;
-            align-items: center;
-            text-align: center;       
-            
-            &:hover{
-                cursor: pointer;
-            }
-        }
     }
     
 }
