@@ -5,30 +5,26 @@ import { ReactComponent as Sound } from "../../Icons/sound.svg";
 import { ReactComponent as SoundDisable } from "../../Icons/soundDisable.svg"
 import { ReactComponent as FullScreen } from "../../Icons/fullScreen.svg"
 
-function Player({ movie, setLoading, setScreen, fullscreen }) {
+function Player({ movie, showPlay, setPlay, setLoading, setScreen, fullscreen, startLoader }) {
 
-    const [showPlay, setPlay] = useState(true);
     const [showSound, setSound] = useState(true);
 
     const playMovie = (type) => {
         if (type === 'play') {
             setPlay(false);
-            setLoading(true) 
-            setTimeout(() => {
-                setPlay(true);
-                setLoading(false)
-            }, 4000)
+            startLoader();
         } else {
-            setPlay(true)
+            setPlay(true);
+            setLoading(false);
         }
     }
 
     const sound = (sound) => {
-        sound === 'off' ? setSound(false) : setSound(true)
+        sound === 'off' ? setSound(false) : setSound(true);
     }
 
     const screenSize = () => {
-        fullscreen === false ? setScreen(true) : setScreen(false); 
+        fullscreen === false ? setScreen(true) : setScreen(false);
     }
 
     return <div className="player">
@@ -42,14 +38,14 @@ function Player({ movie, setLoading, setScreen, fullscreen }) {
                 <SoundDisable className={`playerSound ${!showSound}`} onClick={() => sound('on')}></SoundDisable>
             </div>
             <div className="timer">
-               <div className="timerPart">00:00 / 00:00</div> 
+                <div className="timerPart">00:00 / 00:00</div>
             </div>
         </div>
         <div className="movieName">
             <h5>{movie?.title}</h5>
         </div>
         <div className="showRecommend">
-            <FullScreen className="fullScreen" onClick={()=>screenSize()}></FullScreen>
+            <FullScreen className="fullScreen" onClick={() => screenSize()}></FullScreen>
         </div>
     </div>
 }

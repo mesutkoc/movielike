@@ -1,24 +1,24 @@
 @import "../../typeConstants";
 
-.watchPart{
+.watchPart {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-.watchScreen{
+.watchScreen {
     width: 1000px;
     height: 600px;
     display: inherit;
     justify-content: center;
     align-items: flex-end;
 
-    &.false{
+    &.false {
         width: 1400px;
         height: 600px;
     }
 
-    .signalError{
+    .signalError {
         position: absolute;
         width: 888px;
         height: 600px;
@@ -27,8 +27,8 @@
         opacity: 0.15;
     }
 
-    .loader{
-        position:absolute;
+    .loader {
+        position: absolute;
         margin-bottom: 270px;
         border: 10px solid #EAF0F6;
         border-radius: 50%;
@@ -37,18 +37,23 @@
         height: 100px;
         animation: spinner 4s linear infinite;
 
-        &.false{
+        &.false {
             display: none;
         }
     }
 
     @keyframes spinner {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
-    .player{
-        height: 80px;
+    .player {
+        height: 70px;
         width: inherit;
         background: rgba(0, 0, 0, 0.642);
         display: flex;
@@ -56,80 +61,86 @@
         justify-content: space-between;
         z-index: 1;
 
-        .control{
+        .control {
             margin-left: 20px;
             display: flex;
             align-items: center;
 
-            .play{
+            .play {
                 display: inherit;
                 align-items: inherit;
-                
-                .playerPlay{
+
+                .playerPlay {
                     width: 30px;
                     height: 30px;
                     fill: white;
 
-                    &.false{
-                        display: none;
-                    }      
-                }
-            }
-            
-            .sound{
-                margin-left: 15px;
-                display: inherit;
-                align-items: inherit;
-
-                .playerSound{
-                    width: 30px;
-                    height: 30px;
-                    fill: white;
-
-                    &.false{
+                    &.false {
                         display: none;
                     }
                 }
             }
 
-            .timer{
+            .sound {
+                margin-left: 15px;
+                display: inherit;
+                align-items: inherit;
+
+                .playerSound {
+                    width: 30px;
+                    height: 30px;
+                    fill: white;
+
+                    &.false {
+                        display: none;
+                    }
+                }
+            }
+
+            .timer {
                 margin-left: 15px;
 
-                .timerPart{
+                .timerPart {
                     font-size: 18px;
                     color: white;
                 }
             }
-            
+
         }
-        
-        .movieName > h5{
+
+        .movieName>h5 {
             font-size: 20px;
             color: white;
         }
 
-        .fullScreen{
-            fill: white;
-            width: 30px;
-            height: 30px;
-            margin-right: 20px;
+        .showRecommend {
+            display: inherit;
+
+            .fullScreen {
+                fill: white;
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+            }
         }
 
-        :is(.playerPlay, .playerSound, .fullScreen):hover{
+
+
+        :is(.playerPlay, .playerSound, .fullScreen):hover {
             transform: scale(1.2);
             cursor: pointer;
         }
     }
 }
 
- 
 
-.recommendPart{
+
+.recommendPart {
     width: 380px;
     height: 600px;
     background-color: $black-color;
 
-    &.false{
+    &.false {
         display: none;
     }
 }
