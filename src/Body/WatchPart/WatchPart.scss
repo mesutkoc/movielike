@@ -54,83 +54,178 @@
 
     .player {
         height: 70px;
-        width: inherit;
         background: rgba(0, 0, 0, 0.642);
+        width: inherit;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         z-index: 1;
 
-        .control {
-            margin-left: 20px;
-            display: flex;
-            align-items: center;
-
-            .play {
-                display: inherit;
-                align-items: inherit;
-
-                .playerPlay {
-                    width: 30px;
-                    height: 30px;
-                    fill: white;
-
-                    &.false {
-                        display: none;
-                    }
-                }
-            }
-
-            .sound {
-                margin-left: 15px;
-                display: inherit;
-                align-items: inherit;
-
-                .playerSound {
-                    width: 30px;
-                    height: 30px;
-                    fill: white;
-
-                    &.false {
-                        display: none;
-                    }
-                }
-            }
-
-            .timer {
-                margin-left: 15px;
-
-                .timerPart {
-                    font-size: 18px;
-                    color: white;
-                }
-            }
-
-        }
-
-        .movieName>h5 {
-            font-size: 20px;
-            color: white;
-        }
-
-        .showRecommend {
+        .controlPanel {
             display: inherit;
+            align-items: center;
+            justify-content: space-between;
+            width: inherit;
+            z-index: 1;
 
-            .fullScreen {
-                fill: white;
-                width: 30px;
-                height: 30px;
-                margin-right: 20px;
+            .control {
+                margin-left: 20px;
+                display: inherit;
+                align-items: center;
+
+                .play {
+                    display: inherit;
+                    align-items: inherit;
+
+                    .playerPlay {
+                        width: 30px;
+                        height: 30px;
+                        fill: white;
+
+                        &.false {
+                            display: none;
+                        }
+                    }
+                }
+
+                .sound {
+                    margin-left: 15px;
+                    display: inherit;
+                    align-items: inherit;
+
+                    .playerSound {
+                        width: 30px;
+                        height: 30px;
+                        fill: white;
+
+                        &.false {
+                            display: none;
+                        }
+                    }
+                }
+
+                .timer {
+                    margin-left: 15px;
+
+                    .timerPart {
+                        font-size: 18px;
+                        color: white;
+                    }
+                }
+            }
+
+            .showRecommend {
+                display: inherit;
+
+                .fullScreen {
+                    fill: white;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                }
             }
         }
-
-
 
         :is(.playerPlay, .playerSound, .fullScreen):hover {
             transform: scale(1.2);
             cursor: pointer;
         }
+
+        .movieName {
+            position: absolute;
+            width: inherit;
+
+            h5 {
+                font-size: 20px;
+                color: white;
+            }
+
+        }
     }
+
+    // .player {
+    //     height: 70px;
+    //     width: inherit;
+    //     background: rgba(0, 0, 0, 0.642);
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     z-index: 1;
+
+    //     .control {
+    //         margin-left: 20px;
+    //         display: flex;
+    //         align-items: center;
+
+    //         .play {
+    //             display: inherit;
+    //             align-items: inherit;
+
+    //             .playerPlay {
+    //                 width: 30px;
+    //                 height: 30px;
+    //                 fill: white;
+
+    //                 &.false {
+    //                     display: none;
+    //                 }
+    //             }
+    //         }
+
+    //         .sound {
+    //             margin-left: 15px;
+    //             display: inherit;
+    //             align-items: inherit;
+
+    //             .playerSound {
+    //                 width: 30px;
+    //                 height: 30px;
+    //                 fill: white;
+
+    //                 &.false {
+    //                     display: none;
+    //                 }
+    //             }
+    //         }
+
+    //         .timer {
+    //             margin-left: 15px;
+
+    //             .timerPart {
+    //                 font-size: 18px;
+    //                 color: white;
+    //             }
+    //         }
+
+    //     }
+
+    //     .movieName {
+    //         width: 700px;
+
+    //         h5 {
+    //             font-size: 20px;
+    //             color: white;
+    //         }
+
+    //     }
+
+    //     .showRecommend {
+    //         display: inherit;
+
+    //         .fullScreen {
+    //             fill: white;
+    //             width: 30px;
+    //             height: 30px;
+    //             margin-right: 20px;
+    //         }
+    //     }
+
+
+
+    //     :is(.playerPlay, .playerSound, .fullScreen):hover {
+    //         transform: scale(1.2);
+    //         cursor: pointer;
+    //     }
+    // }
 }
 
 

@@ -28,25 +28,28 @@ function Player({ movie, showPlay, setPlay, setLoading, setScreen, fullscreen, s
     }
 
     return <div className="player">
-        <div className="control">
-            <div className="play">
-                <Play className={`playerPlay ${showPlay}`} onClick={() => playMovie('play')}></Play>
-                <Pause className={`playerPlay ${!showPlay}`} onClick={() => playMovie('pause')}></Pause>
+        <div className="controlPanel">
+            <div className="control">
+                <div className="play">
+                    <Play className={`playerPlay ${showPlay}`} onClick={() => playMovie('play')}></Play>
+                    <Pause className={`playerPlay ${!showPlay}`} onClick={() => playMovie('pause')}></Pause>
+                </div>
+                <div className="sound">
+                    <Sound className={`playerSound ${showSound}`} onClick={() => sound('off')}></Sound>
+                    <SoundDisable className={`playerSound ${!showSound}`} onClick={() => sound('on')}></SoundDisable>
+                </div>
+                <div className="timer">
+                    <div className="timerPart">00:00 / 00:00</div>
+                </div>
             </div>
-            <div className="sound">
-                <Sound className={`playerSound ${showSound}`} onClick={() => sound('off')}></Sound>
-                <SoundDisable className={`playerSound ${!showSound}`} onClick={() => sound('on')}></SoundDisable>
-            </div>
-            <div className="timer">
-                <div className="timerPart">00:00 / 00:00</div>
+            <div className="showRecommend">
+                <FullScreen className="fullScreen" onClick={() => screenSize()}></FullScreen>
             </div>
         </div>
         <div className="movieName">
             <h5>{movie?.title}</h5>
         </div>
-        <div className="showRecommend">
-            <FullScreen className="fullScreen" onClick={() => screenSize()}></FullScreen>
-        </div>
+
     </div>
 }
 
