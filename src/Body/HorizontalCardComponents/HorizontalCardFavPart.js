@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./HorizontalCardFavPart.scss"
 import { ReactComponent as CirclePlay } from "../../Icons/circle-play.svg"
 import { ReactComponent as Star } from "../../Icons/star-solid.svg"
@@ -11,7 +11,8 @@ import { useBasket } from "../../Context/BasketContext";
 
 function HorizontalCardFavPart({ movieData }) {
   const { basket, setBasket } = useBasket();
-  const point = randomPoint();
+
+  const point = useMemo(() => randomPoint(), []);
 
   const addBasket = (item) => {
     const datas = basket?.find(movie => movie.id === item.id);

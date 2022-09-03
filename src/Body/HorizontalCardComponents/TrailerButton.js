@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Routes_Const } from "../../constants";
 import "./TrailerButton.scss";
 import randomPoint from "../../helpers";
 
-function TrailerButton({id}) {
-    
-    let points = randomPoint();
+function TrailerButton({ id }) {
+
+    let points = useMemo(() => randomPoint(), []);
 
     return (
         <div className="trailerButton">
