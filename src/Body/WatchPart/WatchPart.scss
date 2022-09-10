@@ -19,9 +19,10 @@
         transition: 0.6s ease-out;
     }
 
-    &.true{
+    &.true {
         transition: 0.6s ease-out;
     }
+
     .signalError {
         position: absolute;
         width: 888px;
@@ -158,4 +159,52 @@
     &.false {
         display: none;
     }
+
+    .recommendHeader {
+        position: absolute;
+        font-size: 24px;
+        color: white;
+        width: inherit;
+        background-color: $score-color;
+        font-weight: bold;
+    }
+
+    .recommendContent {
+        overflow-y: scroll;
+        height: inherit;
+        height: 570px;
+        margin-top: 30px;
+        
+    }
+
+    .recommendCard {
+        display: flex;
+        margin-top: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+        border-left: 2px solid transparent;
+        
+        .recoCardImg {
+            border: 2px solid $score-color;
+            width: 70px;
+            height: 110px;
+            
+            .image {
+                width: inherit;
+                height: inherit;
+            }
+
+        }
+        
+        .description{
+            font-size: 16px;
+            margin-left: 10px;
+            color: white;
+        }
+
+        &:hover{
+            border-left: 2px solid $score-color;
+        }
+    }
+
 }
