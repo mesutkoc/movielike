@@ -40,9 +40,7 @@
     }
    
     .searchbox{
-        display: flex;
-        align-items: center;
-        
+   
         .headerInput{
             background-color: #FFFFFF;
             border-style: none;
@@ -51,6 +49,12 @@
             height: 40px;
             font-size: 20px;
             padding: 0 20px;
+            outline: none;
+
+            &.true{
+                border-radius: 25px 25px 0 0 ;
+                border-bottom: 1px solid $black-color;
+            }
 
             &::placeholder{
                 color: $black-color;
