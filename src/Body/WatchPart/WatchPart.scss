@@ -152,19 +152,17 @@
 
 
 .recommendPart {
-    width: 380px;
     height: 600px;
     background-color: $black-color;
+    margin-left: 20px;
 
     &.false {
         display: none;
     }
 
     .recommendHeader {
-        position: absolute;
         font-size: 24px;
         color: white;
-        width: inherit;
         background-color: $score-color;
         font-weight: bold;
     }
@@ -173,8 +171,6 @@
         overflow-y: scroll;
         height: inherit;
         height: 570px;
-        margin-top: 30px;
-        
     }
 
     .recommendCard {
