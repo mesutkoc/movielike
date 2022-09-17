@@ -1,8 +1,30 @@
-.suggestionPart{
+@import '../typeConstants';
+
+.suggestionPart {
     position: absolute;
     background-color: #FFFFFF;
-    height: 300px;
     width: 540px;
+    overflow: hidden;
     z-index: 1;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 1);
+
+
+    .suggestionMessage {
+        display: flex;
+        color: $black-color;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .suggestItem {
+        display: flex;
+        padding: 0 10px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+            background-color: $black-color;
+        }
+    }
 }
