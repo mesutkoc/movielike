@@ -36,7 +36,7 @@ function SearchBox() {
                 onChange={event => setSearchTerm(event.target.value.toLowerCase().trim())}
                 onKeyDown={keyDownHandler}></input>
             {
-                focused && <SuggestionPart suggestionMovie={suggestionMovie}></SuggestionPart>
+                focused && <SuggestionPart suggestionMovie={suggestionMovie} searchTerm={searchTerm}></SuggestionPart>
             }
 
         </div>);
