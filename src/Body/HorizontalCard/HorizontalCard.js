@@ -7,7 +7,7 @@ import Genres from "../HorizontalCardComponents/Genres";
 import "./HorizontalCard.scss";
 
 function HorizontalCard({movieData}) {
-  return <div className="horizontalCard">
+  return <li className="horizontalCard">
       <HorizontalCardImage image={movieData?.poster}></HorizontalCardImage>
       <div className="horizontalCardRightSide">
            <CardOverview overview={movieData?.overview}></CardOverview>
@@ -15,9 +15,7 @@ function HorizontalCard({movieData}) {
            <HorizontalCardFavPart movieData={movieData}></HorizontalCardFavPart>
            <Genres genres={movieData?.genres}></Genres>
       </div>
-     
-      
-  </div>;
+  </li>;
 }
 
 export default HorizontalCard;

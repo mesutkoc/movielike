@@ -26,12 +26,11 @@ function CategoryPage() {
 
     return <div className="categoryPage">
         {catMovies.length !== 0 && <SearchResult searchResult={catMovies.length} genre={genre}></SearchResult>}
-        <div className="categoryMovies">
+        <ul className="categoryMovies">
             {currentMovie?.map((movieData, index) =>
              <HorizontalCard movieData={movieData} key={index}></HorizontalCard>)}
-            {pagenumber.length > 1 && <Pagination genre={genre} pagenumber={pagenumber} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
-        </div>
-        
+        </ul>
+        {pagenumber.length > 1 && <Pagination genre={genre} pagenumber={pagenumber} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>}
     </div>;
 }
 

@@ -1,9 +1,9 @@
 .categoryPage{
-    margin-top: 15px;
-
+    
     .searchResult{
         font-size: 18px;
         display: flex;
+        padding-top: 10px;
         margin-left: 30px;
         width: 600px;
 
@@ -14,9 +14,14 @@
     }
 
     .categoryMovies{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-top: 10px;
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(100px,700px));
+        grid-gap: 10px;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
     }
 }
