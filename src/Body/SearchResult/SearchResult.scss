@@ -1,0 +1,12 @@
+.searchResult{
+    font-size: 18px;
+    display: flex;
+    padding-top: 10px;
+    margin-left: 30px;
+    width: 600px;
+
+    .searchResSpan{
+        margin: 0 5px;
+        font-weight: bold;
+    }
+}

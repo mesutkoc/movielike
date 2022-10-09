@@ -25,7 +25,7 @@ function CategoryPage() {
     }
 
     return <div className="categoryPage">
-        {catMovies.length !== 0 && <SearchResult searchResult={catMovies.length} genre={genre}></SearchResult>}
+        {catMovies.length !== 0 && <SearchResult searchResult={catMovies.length} genre={genre} page="category"></SearchResult>}
         <ul className="categoryMovies">
             {currentMovie?.map((movieData, index) =>
              <HorizontalCard movieData={movieData} key={index}></HorizontalCard>)}
