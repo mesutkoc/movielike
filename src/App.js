@@ -11,6 +11,7 @@ import Basket from './Header/Basket';
 import Detail from './Body/DetailPage/Detail';
 import CategoryPage from './Body/CategoryPage/CategoryPage';
 import WatchMovie from './Body/WatchPart/WatchMovie';
+import SearchResultPage from './Body/SearchResultPage/SearchResultPage';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     component2: {id: "2", path: `/${Routes_Const.DETAILS}/${Routes_Const.ID}`, element: <Detail />},
     component3: {id: "3", path: `/${Routes_Const.CATEGORY}/:${Routes_Const.GENRE}&${Routes_Const.PAGE}=:page`, element: <CategoryPage/>},
     component4: {id: "4", path: `/${Routes_Const.WATCH}/${Routes_Const.ID}`, element: <WatchMovie movies={movies}/>},
+    component5: {id: "5", path: `/${Routes_Const.SEARCH_RESULT}`, element: <SearchResultPage></SearchResultPage>},
   }
 
   return (

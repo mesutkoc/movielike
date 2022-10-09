@@ -1,19 +1,24 @@
 import React, { useState } from "react";
-import SuggestionPart from "./SuggestionPart";
 import { useMovie } from "../Context/MovieContext";
+import { useNavigate } from 'react-router-dom';
+import SuggestionPart from "./SuggestionPart";
+import { Routes_Const } from "../constants";
 
 function SearchBox() {
     const [searchTerm, setSearchTerm] = useState('');
     const [suggestionMovie, setSuggestionMovie] = useState([]);
     const [focused, setFocus] = useState(false);
-    const { movies } = useMovie();
 
+    const { movies } = useMovie();
+    const navigate = useNavigate();
+    const searchTermLength = searchTerm?.length;
+    
     const keyDownHandler = (event) => {
         const suggestMovies = movies?.filter(item => item?.title?.toLowerCase().trim().includes(searchTerm));
-        searchTerm?.length > 1 ? setSuggestionMovie(suggestMovies) : setSuggestionMovie([]);
-
-        if (event.key === 'Enter') {
-            console.log('enter', searchTerm);
+        searchTermLength > 1 ? setSuggestionMovie(suggestMovies) : setSuggestionMovie([]);
+        
+        if (event.key === 'Enter' && searchTermLength > 1) {
+            navigate(`${Routes_Const.SEARCH_RESULT}`, { state: suggestMovies });
         }
     }
 

@@ -4,7 +4,8 @@ const Routes_Const = {
     WATCH: 'watch',
     DETAILS: 'details',
     ID: ':id',
-    PAGE: 'page'
+    PAGE: 'page',
+    SEARCH_RESULT: 'searchresult'
 }
 
 const Data_Url = {
