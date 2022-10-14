@@ -9,13 +9,24 @@
     .verticalFilter{
         width: 300px;
        
-       
         .verticalFilterPart{
             background-color: white;
             min-height: 418px;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             margin-top: 40px;
+
+            .verticalFilterItems{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 20px;
+                list-style: none;
+
+                .verticalFilterItem{
+                    cursor: pointer;
+                }
+            }
         }
     }
 
