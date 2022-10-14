@@ -7,6 +7,7 @@ import "./SearchResultPage.scss"
 function SearchResultPage() {
     const { state } = useLocation();
     const [filterItems, setFilterItems] = useState([]);
+    const [isChecked, setIsChecked] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState('');
     const filterList = [];
 
@@ -28,11 +29,12 @@ function SearchResultPage() {
 
     const handleOnClick = ({ clickedFilter }) => {
         setSelectedFilter(clickedFilter);
+        setIsChecked(!isChecked);
     }
 
 
     return <div className="searchResultPage">
-        <VerticalFilter filterItems={filterItems} handleOnClick={handleOnClick}></VerticalFilter>
+        <VerticalFilter filterItems={filterItems} handleOnClick={handleOnClick} isChecked={isChecked}></VerticalFilter>
         <SearchResultSide searchResult={filteredData}></SearchResultSide>
     </div>;
 }
