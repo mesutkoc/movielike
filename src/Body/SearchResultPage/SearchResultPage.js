@@ -8,10 +8,16 @@ function SearchResultPage() {
     const { state } = useLocation();
     const [filterItems, setFilterItems] = useState([]);
     const [selectedFilter, setSelectedFilter] = useState('');
-
     const filterList = [];
 
-    
+    const filterMovies = ({ selectedFilter, state }) => {
+        const data = state.filter(film => film.genres.some(a => a === selectedFilter));
+        return data;
+    }
+
+    const filteredData = useMemo(() => (
+        selectedFilter === '' ? state : filterMovies({ selectedFilter, state })
+    ), [selectedFilter, state])
 
     const setFilterData = ({ state }) => {
         state.map(a => a.genres.filter(e => !filterList.some(d => d === e) && filterList.push(e)));
@@ -27,7 +33,7 @@ function SearchResultPage() {
 
     return <div className="searchResultPage">
         <VerticalFilter filterItems={filterItems} handleOnClick={handleOnClick}></VerticalFilter>
-        <SearchResultSide searchResult={state}></SearchResultSide>
+        <SearchResultSide searchResult={filteredData}></SearchResultSide>
     </div>;
 }
 
