@@ -2,7 +2,9 @@ import React from "react";
 
 function VerticalFilter({ filterItems, handleOnClick, isChecked, handleOnChange }) {
   return <div className="verticalFilter">
-    <div className="verticalFilterPart">
+   
+    <div className="verticalFilterPart"> 
+      <label className="filterHeader">Genres</label>
       <ul className="verticalFilterItems">
         {filterItems?.map((item, index) => <li className="verticalFilterItem" key={index} onClick={() => handleOnClick({ clickedFilter: item })} >  
         <input

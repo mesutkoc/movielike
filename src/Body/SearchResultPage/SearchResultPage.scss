@@ -4,6 +4,7 @@
     background-color: #F0F0F0;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 10px;
  
 
     .verticalFilter{
@@ -14,7 +15,14 @@
             min-height: 408px;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
-            margin-top: 40px;
+
+            .filterHeader{
+                display: block;
+                padding: 10px 0;
+                font-size: 20px;
+                font-weight: bold;
+                box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+            }
 
             .verticalFilterItems{
                 padding: 10px 20px;
