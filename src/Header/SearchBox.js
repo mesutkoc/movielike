@@ -19,6 +19,8 @@ function SearchBox() {
         
         if (event.key === 'Enter' && searchTermLength > 1) {
             navigate(`${Routes_Const.SEARCH_RESULT}`, { state: suggestMovies });
+            setFocus(false);
+            event.target.value = '';
         }
     }
 
