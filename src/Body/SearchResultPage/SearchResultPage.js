@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { useLocation } from 'react-router-dom';
 import SearchResultSide from "./SearchResultSide";
 import VerticalFilter from "./VerticalFilter";
@@ -7,7 +7,6 @@ import "./SearchResultPage.scss"
 function SearchResultPage() {
     const { state } = useLocation();
     const [filterItems, setFilterItems] = useState([]);
-    const [isChecked, setIsChecked] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState('');
     const filterList = [];
 
@@ -29,12 +28,11 @@ function SearchResultPage() {
 
     const handleOnClick = ({ clickedFilter }) => {
         setSelectedFilter(clickedFilter);
-        setIsChecked(!isChecked);
     }
 
 
     return <div className="searchResultPage">
-        <VerticalFilter filterItems={filterItems} handleOnClick={handleOnClick} isChecked={isChecked}></VerticalFilter>
+        <VerticalFilter filterItems={filterItems} handleOnClick={handleOnClick}></VerticalFilter>
         <SearchResultSide searchResult={filteredData}></SearchResultSide>
     </div>;
 }
