@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useLocation } from 'react-router-dom';
 import SearchResultSide from "./SearchResultSide";
 import VerticalFilter from "./VerticalFilter";
@@ -8,11 +8,11 @@ function SearchResultPage() {
     const { state } = useLocation();
     const [filterItems, setFilterItems] = useState([]);
     const [selectedFilter, setSelectedFilter] = useState('');
-    const [checked, setChecked] = useState();
+    const [checked, setChecked] = useState(null);
     const filterList = [];
 
     const filterMovies = ({ selectedFilter, state }) => {
-        const data = state.filter(film => film.genres.some(a => a === selectedFilter));
+        const data = state.filter(film => film?.genres?.some(a => a === selectedFilter));
         return data;
     }
 
@@ -21,12 +21,16 @@ function SearchResultPage() {
     ), [selectedFilter, state])
 
     const setFilterData = ({ state }) => {
-        state.map(a => a.genres.filter(e => !filterList.some(d => d === e) && filterList.push(e)));
+        state.map(a => a?.genres?.filter(e => !filterList?.some(d => d === e) && filterList.push(e)));
         setFilterItems(filterList);
     };
 
-    useMemo(() => setFilterData({ state }), [state]);
-
+    useEffect(() => {
+        setFilterData({ state });
+        setSelectedFilter('');
+        setChecked(null);
+    }, [state]);
+    
     const handleOnClick = ({ clickedFilter, index }) => {
         setSelectedFilter(clickedFilter);
         setChecked(index);
