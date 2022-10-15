@@ -8,6 +8,7 @@ function SearchResultPage() {
     const { state } = useLocation();
     const [filterItems, setFilterItems] = useState([]);
     const [selectedFilter, setSelectedFilter] = useState('');
+    const [checked, setChecked] = useState();
     const filterList = [];
 
     const filterMovies = ({ selectedFilter, state }) => {
@@ -26,13 +27,14 @@ function SearchResultPage() {
 
     useMemo(() => setFilterData({ state }), [state]);
 
-    const handleOnClick = ({ clickedFilter }) => {
+    const handleOnClick = ({ clickedFilter, index }) => {
         setSelectedFilter(clickedFilter);
+        setChecked(index);
     }
 
 
     return <div className="searchResultPage">
-        <VerticalFilter filterItems={filterItems} handleOnClick={handleOnClick}></VerticalFilter>
+        <VerticalFilter filterItems={filterItems} handleOnClick={handleOnClick} checked={checked} setChecked={setChecked}></VerticalFilter>
         <SearchResultSide searchResult={filteredData}></SearchResultSide>
     </div>;
 }

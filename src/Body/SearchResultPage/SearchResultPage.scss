@@ -1,22 +1,22 @@
 @import "../../typeConstants";
 
-.searchResultPage{
+.searchResultPage {
     background-color: #F0F0F0;
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
- 
 
-    .verticalFilter{
+
+    .verticalFilter {
         width: 300px;
-       
-        .verticalFilterPart{
+
+        .verticalFilterPart {
             background-color: white;
             min-height: 408px;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
 
-            .filterHeader{
+            .filterHeader {
                 display: block;
                 padding: 10px 0;
                 font-size: 20px;
@@ -24,11 +24,11 @@
                 box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
             }
 
-            .verticalFilterItems{
+            .verticalFilterItems {
                 padding: 10px 20px;
                 list-style: none;
 
-                .verticalFilterItem{
+                .verticalFilterItem {
                     display: flex;
                     align-items: center;
                     width: 100%;
@@ -36,21 +36,37 @@
                     padding: 2px 5px;
                     cursor: pointer;
 
-                    .checkbox{
-                        margin-right: 5px;
-                        width: 15px;
-                        height: 15px;
+                    input[type=radio] {
+                        width: 16px;
+                        height: 16px;
+                        border: 2px solid #747474;
+                        border-radius: 50%;
+                        outline: none;
+                        transition: 0.3s;
                         accent-color: $score-color;
+                        margin-right: 5px;
                     }
 
-                    &:hover{
+                    input[type=radio]:hover:before {
+                        box-shadow: 0px 0px 0px 12px rgba(80, 80, 200, 0.2);
+                    }
+
+                    input[type=radio]:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        transition: .3s;
+                    }
+
+                    input[type=radio]:checked:before {
+                        background: $score-color;
+                    }
+
+                    &:hover {
                         background-color: rgb(72, 72, 72, 0.1);
                         border-radius: 5px;
-                    }
-
-                    .left-section{
-                        display: inherit;
-                        align-items: center;
                     }
                 }
 
@@ -58,33 +74,33 @@
         }
     }
 
-    .searchResultSide{
+    .searchResultSide {
         width: 1000px;
 
-        .cardDetail{
+        .cardDetail {
             background-color: $black-color;
             display: flex;
             align-items: center;
             margin-top: 10px;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 1);
             border-radius: 10px;
-            padding: 10px; 
+            padding: 10px;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 background-color: $score-color;
 
-                .detailImage{
+                .detailImage {
                     border: 2px solid white;
                 }
             }
 
-            span{
+            span {
                 padding: 0 50px;
                 color: white;
             }
 
-            .detailImage{
+            .detailImage {
                 height: 180px;
                 width: 120px;
                 border: 2px solid transparent;
@@ -92,7 +108,7 @@
             }
         }
 
-        .searchResult{
+        .searchResult {
             margin-left: 0;
         }
     }
