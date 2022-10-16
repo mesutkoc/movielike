@@ -1,13 +1,13 @@
 @import '../typeConstants';
 
-.rootHeader{
+.rootHeader {
     background-color: $nav-color;
     display: flex;
     height: 100px;
     justify-content: space-around;
     align-items: center;
 
-    .logo{
+    .logo {
         width: 70px;
         height: 70px;
         background-image: url('../Images/video-camera-small.png');
@@ -17,7 +17,7 @@
         border: 3px solid $black-color;
     }
 
-    .headerTitlelink{
+    .headerTitlelink {
         display: flex;
         align-items: center;
         font-style: italic;
@@ -27,7 +27,7 @@
         cursor: pointer;
         text-decoration: none;
 
-        .logo{
+        .logo {
             width: 60px;
             height: 60px;
             background-image: url('../Images/video-camera-small.png');
@@ -38,33 +38,49 @@
             margin-right: 10px;
         }
     }
-   
-    .searchbox{
-   
-        .headerInput{
-            background-color: #FFFFFF;
-            border-style: none;
-            border-radius: 25px;
-            width: 500px;
-            height: 40px;
-            font-size: 20px;
-            padding: 0 20px;
-            outline: none;
 
-            &.true{
-                border-radius: 25px 25px 0 0 ;
-                border-bottom: 1px solid $black-color;
+    .searchbox {
+        width: 500px;
+        background-color: #FFFFFF;
+        border-style: none;
+        border-radius: 25px;
+
+        .searchInput {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            .headerInput {
+                width: 70%;
+                border-style: none;
+                height: 40px;
+                font-size: 18px;
+                outline: none;
+                margin-left: 40px;
+
+                &::placeholder {
+                    color: $black-color;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+
             }
 
-            &::placeholder{
-                color: $black-color;
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
+            .searchIcon {
+                position: absolute;
+                margin-left: 10px;
+            }
+
+            &.true {
+                border-radius: 25px 25px 0 0;
+                border-bottom: 1px solid $black-color;
+                background-color: #FFFFFF;
             }
         }
 
+
     }
-    
+
 }
