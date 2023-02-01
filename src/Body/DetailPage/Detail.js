@@ -12,7 +12,7 @@ function Detail() {
   useEffect(() => {
     getMovieByID(id).then(res => setMovie(res));
   }, [id])
-
+  console.log('deneme');
   return (
     <div className="detailPageRoot">
       <DetailImage image={movie?.poster}></DetailImage>
