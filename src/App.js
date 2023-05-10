@@ -28,7 +28,7 @@ function App() {
     component4: {id: "4", path: `/${Routes_Const.WATCH}/${Routes_Const.ID}`, element: <WatchMovie movies={movies}/>},
     component5: {id: "5", path: `/${Routes_Const.SEARCH_RESULT}`, element: <SearchResultPage></SearchResultPage>},
   }
-
+  const deneme = 'deneme';
   return (
     <Router>
       <div className="App">
